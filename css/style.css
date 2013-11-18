@@ -1,0 +1,50 @@
+/*   
+Author: Thien Nguyen
+Author URI: http://nathiwos.com
+Version: 0.0.1
+*/
+a:hover{
+	color: #16a1c4;
+}
+/**************** HEADER STYLE ****************/
+
+
+header{
+	background-color: #f3f6f8;
+}
+
+#top-bar{
+	height: 28px;
+	border-bottom: 1px solid #D8D5D5;
+	color: #707173;
+	background-color: #ffffff;
+}
+
+#top-bar .container_16{
+	position: relative;
+}
+
+#top-bar .hotline{
+	padding-left: 20px;
+	height: 28px;
+	line-height: 28px;
+	background:url(../images/phone-top.png) no-repeat left center;
+	font-size: 14px;
+}
+
+#top-menu ul{
+	position: absolute;
+	margin-right: 0px;
+	right: 0px;
+}
+
+#top-menu ul li{
+	display: inline;
+	line-height: 28px;
+	margin:0px 5px 0px 5px;
+}
+
+#top-menu ul li a{
+	text-decoration: none;
+	color: inherit;
+}
