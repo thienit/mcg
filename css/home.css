@@ -1,0 +1,226 @@
+/**************** HOME PAGE SECTION STYLE ****************/
+.homepage section{
+	margin-top: 50px;
+}
+
+.homepage section h1{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 36px;
+	font-weight: normal;
+	color: #232222;
+	padding: 20px 0 10px 0;
+	border-bottom: 1px solid #D8D5D5;
+}
+/**************** SLIDESHOW STYLE ****************/
+#slideshow{
+	margin-top: 36px;
+}
+#slideshow .grid_16{
+	background-color: #EEEEEE;
+	height: 375px;
+	position: relative;
+}
+#slideshow .slide{
+	position: absolute;
+	top:60px;
+	left: 20px;
+}
+#slideshow .slide img{
+	position: absolute;
+	max-width: 500px;
+}
+#slideshow .slide .desc{
+	position: absolute;
+	left: 520px;
+	padding-right: 10px;
+	width: 390px;
+}
+#slideshow .slide h1{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	color: #3C3C3C;
+	font-size: 52px;
+	margin-top: 10px;
+	padding: 0;
+	border-bottom: 0;
+}
+#slideshow .slide h2{
+	font-size: 32px;
+	font-weight: normal;
+	color: #1B1B1B;
+	margin-top: 24px;
+}
+#slideshow .slide h3{
+	font-size: 36px;
+	font-weight: normal;
+	margin-top: 24px;
+}
+#slideshow .slide a{
+	text-decoration: none;
+	color: inherit;
+}
+#slideshow .slide a:hover{
+	text-decoration: none;
+	color: inherit;
+}
+#slideshow .pagi{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+#slideshow .pagi li{
+	padding: 0;
+	width: 14px;
+	height: 14px;
+	background-color: #232222;
+	display: inline-block;
+	margin-left: 3px;
+	cursor: pointer;
+}
+#slideshow .pagi li.actived{
+	background-color: #16A1C4;
+}
+#slideshow .pagi li:hover{
+
+}
+
+
+/**************** ABOUT-COMPANY STYLE ****************/
+#about-company{
+	background-color: #16A1C4;
+	height: 450px;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	color: #FFFFFF;
+}
+#about-company h1{
+	color: #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+}
+#about-company h2{
+	font-weight: normal;
+	font-size: 24px;
+	margin-top: 14px;
+	margin-bottom: 84px;
+}
+#about-company p{
+	font-size: 18px;
+}
+#about-company a{
+	text-decoration: none;
+	color: inherit;
+}
+#about-company a:hover{
+	text-decoration: underline;
+	color: inherit;
+}
+#about-company .direction{
+	margin-top: 14px;
+}
+#about-company .direction div{
+	border: 1px solid #FFFFFF;
+	padding: 10px;
+	margin-top: 20px;
+}
+#about-company .direction div img{
+	margin: 5px;
+}
+
+/**************** PRODUCT-TILES STYLE ****************/
+#product-tiles .grid_4{
+	margin-top: 20px;
+	color: #FFFFFF;
+	position: relative;
+	overflow: hidden;
+}
+#product-tiles h1{
+	margin-bottom: 20px;
+}
+#product-tiles .grid_4 img{
+	width: 220px;
+	height: 220px;
+}
+#product-tiles .grid_4 a{
+	color: inherit;
+	text-decoration: none;
+}
+#product-tiles .grid_4 a:hover{
+	text-decoration: underline;
+}
+#product-tiles .grid_4 > ul{
+	position: absolute;
+	top: 0;
+	left: 220px;
+	background-color: #383f41;
+	opacity: 0.91;
+	width: 160px;
+	height: 200px;
+	padding: 10px;
+	transition: left  0.6s  ease-out;
+	-webkit-transition: left  0.6s  ease-out;
+	-ms-transition: left  0.6s  ease-out;
+	-moz-transition: left  0.6s  ease-out;
+}
+#product-tiles .grid_4:hover > ul{
+	left: 40px;
+}
+#product-tiles .grid_4 > ul > li > a{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#product-tiles .grid_4 > ul ul li{
+	margin-top: 14px;
+	margin-left: 10px;
+}
+
+#product-tiles .grid_4 > ul ul a{
+	font-size: 14px;
+}
+
+/**************** ARTICLES STYLE ****************/
+#articles{
+	background-color: #16A1C4;
+	height: 450px;
+	color: #FFFFFF;
+}
+#articles h1{
+	color: #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+}
+#articles a{
+	color: inherit;
+	text-decoration: none;
+}
+#articles a:hover{
+	text-decoration: underline;
+}
+#articles h3{
+	font-size: 18px;
+}
+#articles .art{
+	float: left;
+	display: inline-block;
+	width: 300px;
+	margin-top: 30px;
+	margin-right: 10px;
+}
+#articles .art .illus{
+	float: left;
+	width: 128px;
+}
+#articles .art .illus img{
+	width: 120px;
+	height: 120px;
+}
+#articles .art .title{
+	margin-top: 47px;
+}
+#articles .art .desc{
+	margin-top: 40px;
+	height: 110px;
+	overflow: hidden;
+}
+#articles .art .more-detail{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 16px;
+	margin-top: 10px;
+}
