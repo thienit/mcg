@@ -12,11 +12,40 @@ Version: 0.0.1
 body{
 	color: #707173;
 }
+
 a:hover{
 	color: #16a1c4;
 }
+
 .price{
 	color: #EF3F47;
+}
+
+.old-price{
+	text-decoration: line-through;
+}
+
+.btn-style{
+	padding: 12px 14px;
+	border: none;
+	font-size: 14px;
+	font-family: "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+	font-weight: bold;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	cursor: pointer;
+}
+.btn-style:focus{
+	outline: 0;
+}
+.btn-cyan{
+	background: #45b7e3;
+	color: #FFFFFF;
+}
+.btn-cyan:hover{
+	background: #31afdf;
 }
 /**************** TOP-BAR STYLE ****************/
 
@@ -308,7 +337,7 @@ aside .widget h1{
 #cat a:hover{
 	color: #16A1C4;
 }
-#cat a.actived{
+#cat a.active{
 	color: #16A1C4;
 }
 #cat li{
@@ -428,7 +457,7 @@ aside .widget h1{
 .pagination a:hover{
 	color: #16A1C4;
 }
-.pagination a.actived{
+.pagination a.active{
 	color: #16A1C4;	
 	cursor: default;
 }

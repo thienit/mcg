@@ -4,7 +4,7 @@
 	<meta charset='UTF-8'/>
 	<title>Nội Thất MCG::Kệ ti vi 2</title>
 	<link rel="stylesheet" href='../css/style.css' />
-	<link rel="stylesheet" href="../css/product-detail.css" />
+	<link rel="stylesheet" href="../css/shopping-cart.css" />
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -21,14 +21,14 @@
 
 			//[thien.nguyen] Handle quantity up/down button
 			$('.quantity-container .up').click(function () {
-				var p_quantity = $('.p-quantity').attr('value');
-				$('.p-quantity').val(parseInt(p_quantity) + 1);
+				var p_quantity = $(this).parent().parent().('.p-quantity').attr('value');
+				$(this).parent().parent().('.p-quantity').val(parseInt(p_quantity) + 1);
 			});
 
 			$('.quantity-container .down').click(function () {
-				var p_quantity = $('.p-quantity').attr('value');
+				var p_quantity = $(this).parent().parent().('.p-quantity').attr('value');
 				if(parseInt(p_quantity) > 1)
-					$('.p-quantity').val(parseInt(p_quantity) - 1);
+					$(this).parent().parent().('.p-quantity').val(parseInt(p_quantity) - 1);
 			})
 		})
 	</script>
@@ -194,36 +194,25 @@
 			</div>
 		</aside>
 		<article class="grid_12">
-			<div id="product-detail">
-				<div class="product-image grid_7 alpha">
-					<div class="big-image"><img src="../images/products/pk1-big.jpg" /></div>
-					<div class="gallery-thumbs">
-						<ul>
-							<li><img src="../images/products/pk1.jpg" /></li>
-							<li><img src="../images/products/pk2.jpg" /></li>
-						</ul>
-					</div>
-				</div>
-				<div class="summary grid_5 omega">
-					<h1>KỆ TIVI 2</h1>
-					<h2 class="old-price">10.900.000 VND</h2>
-					<h1 class="price">9.900.000 VND</h1>
-					<p><label>Màu sắc: </label><span>Đen - Trắng</span></p>
-					<p><label>Chất liệu: </label><span>Gỗ CN MDF sơn NIPPON màu trắng bóng mờ 50%</span></p>
-					<p><label>Kích thước: </label><span>Dài: 2.4m x Rộng: 0.5m x Cao: 2.1m</span></p>
-					<p><label>Vận chuyển: </label><span>Miễn phí trong nội thành</span></p>
-					<form class="purchase" method="post">
-						<table>
+			<section id="shopping-cart">
+				<h1>Giỏ hàng</h1>
+				<form id="f-shopping-cart" name="shopping-cart" method="post" />
+					<table class="tbl-products-in-cart">
+						<thead>
 							<tr>
-								<td><label for="purchase_color">Màu sắc:</label></td>
-								<td>
-									<select id="purchase_color">
-										<option>Đen - Trắng</option>
-									</select>
-								</td>
+								<td>&nbsp;</td>
+								<td colspan="2">Sản phẩm</td>
+								<td>Giá</td>
+								<td>Số lượng</td>
+								<td>Tổng</td>
 							</tr>
+						</thead>
+						<tbody>
 							<tr>
-								<td><label for="purchase_quantity">Số lượng:</label></td>
+								<td><button class="btn-close">&nbsp;</button></td>
+								<td><a href="#"><img src="../images/products/pk1.jpg"/></a></td>
+								<td><a href="#">Kệ Tivi 2</a></td>
+								<td>9.990.000</td>
 								<td class="quantity-container">
 									<input type="text" id="purchase_quantity" class="p-quantity" value="1" />
 									<ul class="btn-container">
@@ -231,117 +220,27 @@
 										<li><button type="button" class="down"></button></li>
 									</ul>
 								</td>
+								<td>9.990.000</td>
 							</tr>
 							<tr>
-								<td colspan="2">
-									<button type="submit" class="btn-style btn-cyan">
-										Thêm vào giỏ hàng
-									</button>
+								<td><button class="btn-close">&nbsp;</button></td>
+								<td><a href="#"><img src="../images/products/pn3.jpg"/></a></td>
+								<td><a href="#">Giường ngủ 1</a></td>
+								<td>7.800.000</td>
+								<td class="quantity-container">
+									<input type="text" id="purchase_quantity" class="p-quantity" value="1" />
+									<ul class="btn-container">
+										<li><button type="button" class="up"></button></li>
+										<li><button type="button" class="down"></button></li>
+									</ul>
 								</td>
+								<td>7.800.000</td>
 							</tr>
-						</table>
-					</form>
-				</div>
-				<div class="clear"></div>
-				<div class="detail">
-					<ul class="tabs">
-						<li class="p-desc active">Mô tả sản phẩm</li>
-						<li class="p-spec">Thông tin chi tiết</li>
-					</ul>
-					<div class="clear"></div>
-					<div class="tab_container">
-						<div id="p-desc" class="tab_content">
-							<h1>Kệ Tivi 2</h1>
-							<p>Kệ tivi được thiết kế phù hợp với phòng khách có phong cách hiện đại và ăn nhập với tông màu lạnh. công năng được thiết kế kếp hợp với chức năng kệ tivi và tủ đồ trang trí, chất liệu bằng gỗ công nghiệp MDF sơn NIPPON màu trắng. ray giam chấn  , phụ kiên hafele.</p>
-						</div>
-
-						<div id="p-spec" class="tab_content">
-							<h2>Vận chuyển :</h2>
-							<p>Miễn phí chuyển hàng trong nội thành </p>
-							<h2>Vật liệu :</h2>
-							<p>Gỗ công nghiệp , Veneer Óc Chó (Walnut ) </p>
-							<h2>Kích thước tủ:</h2>
-							<p>Dài: 2.4m x Rộng: 0.5m x Cao: 2.1m</p>
-							<h2>Thiết kế :</h2>
-							<p>Kệ tivi được thiết kế theo phong cách hiện đại, phù hợp không gian đơn giản và mộc mạc</p>
-							<h2>Chất lượng :</h2>
-							<p>Nguyên liệu dùng gỗ công nghiệp gỗ dán phủ Veneer ÓC Chó. tấm hậu bằng gỗ MDF dày 6 ly</p>
-							<h2>Hoàn thiện :</h2>
-							<p>Kệ tivi được thi công và lắp rắp hoàn thiện</p>
-							<h2>Đơn giá :</h2>
-							<p class="price">9.990.000 VND</p>
-						</div>
-					</div><!-- end of #tab_container -->
-				</div>
-			</div><!-- end of ##product-detail -->
-			<section>
-				<h1>Sản phẩm cùng loại</h1>
-				<div class="product grid_3 alpha">
-					<a href="#"><a href="#"><img src="../images/products/pk1.jpg"/></a>
-					<p class="product-name"><a href="#">Mẫu sản phẩm 1</a></p>
-					<p class="price">9.990.000 VND</p>
-					<a class="adding-cart" href="#">Thêm vào giỏ</a>
-					<a class="more-detail" href="#">Xem chi tiết</a>
-				</div>
-				<div class="product grid_3">
-					<a href="#"><img src="../images/products/pk2.jpg"/></a>
-					<p class="product-name"><a href="#">Mẫu sản phẩm 2</a></p>
-					<p class="price">9.990.000 VND</p>
-					<a class="adding-cart" href="#">Thêm vào giỏ</a>
-					<a class="more-detail" href="#">Xem chi tiết</a>
-				</div>
-				<div class="product grid_3">
-					<a href="#"><img src="../images/products/pk3.jpg"/></a>
-					<p class="product-name"><a href="#">Mẫu sản phẩm 3</a></p>
-					<p class="price">9.990.000 VND</p>
-					<a class="adding-cart" href="#">Thêm vào giỏ</a>
-					<a class="more-detail" href="#">Xem chi tiết</a>
-				</div>
-				<div class="product grid_3 omega">
-					<a href="#"><img src="../images/products/pk4.jpg"/></a>
-					<p class="product-name"><a href="#">Mẫu sản phẩm 4</a></p>
-					<p class="price">9.990.000 VND</p>
-					<a class="adding-cart" href="#">Thêm vào giỏ</a>
-					<a class="more-detail" href="#">Xem chi tiết</a>
-				</div>
-				<div class="product grid_3 alpha">
-					<a href="#"><img src="../images/products/pn1.jpg"/></a>
-					<p class="product-name"><a href="#">Mẫu sản phẩm 1</a></p>
-					<p class="price">9.990.000 VND</p>
-					<a class="adding-cart" href="#">Thêm vào giỏ</a>
-					<a class="more-detail" href="#">Xem chi tiết</a>
-				</div>
-				<div class="product grid_3">
-					<a href="#"><img src="../images/products/pn2.jpg"/></a>
-					<p class="product-name"><a href="#">Mẫu sản phẩm 2</a></p>
-					<p class="price">9.990.000 VND</p>
-					<a class="adding-cart" href="#">Thêm vào giỏ</a>
-					<a class="more-detail" href="#">Xem chi tiết</a>
-				</div>
-				<div class="product grid_3">
-					<a href="#"><img src="../images/products/pn3.jpg"/></a>
-					<p class="product-name"><a href="#">Mẫu sản phẩm 3</a></p>
-					<p class="price">9.990.000 VND</p>
-					<a class="adding-cart" href="#">Thêm vào giỏ</a>
-					<a class="more-detail" href="#">Xem chi tiết</a>
-				</div>
-				<div class="product grid_3 omega">
-					<a href="#"><img src="../images/products/pn4.jpg"/></a>
-					<p class="product-name"><a href="#">Mẫu sản phẩm 4</a></p>
-					<p class="price">9.990.000 VND</p>
-					<a class="adding-cart" href="#">Thêm vào giỏ</a>
-					<a class="more-detail" href="#">Xem chi tiết</a>
-				</div>
-
-				<div class="clear"></div>
-
-				<div class="pagination">
-					<a href="#">&lt; Trước</a>
-					<a href="#">1</a>
-					<a href="#" class="active">2</a>
-					<a href="#">3</a>
-					<a href="#">Sau &gt;</a>
-				</div>
+							
+						</tbody>
+					</table>
+				</form>
+				
 			</section>
 		</article>
 	</div><!--end of #content-->

@@ -1,3 +1,9 @@
+/*   
+Author: Thien Nguyen
+Author URI: http://nathiwos.com
+Version: 0.0.1
+*/  
+
 /**************** HOME PAGE SECTION STYLE ****************/
 .homepage section{
 	margin-top: 50px;
@@ -76,7 +82,7 @@
 	margin-left: 3px;
 	cursor: pointer;
 }
-#slideshow .pagi li.actived{
+#slideshow .pagi li.active{
 	background-color: #16A1C4;
 }
 #slideshow .pagi li:hover{
