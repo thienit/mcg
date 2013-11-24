@@ -8,28 +8,19 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-
-			$('.tab_content:not(:first)').hide();
-
-			$('.tabs li').click(function(){
-				$('.tabs li').removeClass('active');
-				$('.tab_content').hide();
-				var activeTab = $(this).attr('class');
-				$('#'+activeTab).fadeIn();
-				$(this).addClass('active');
-			});
-
 			//[thien.nguyen] Handle quantity up/down button
 			$('.quantity-container .up').click(function () {
-				var p_quantity = $(this).parent().parent().('.p-quantity').attr('value');
-				$(this).parent().parent().('.p-quantity').val(parseInt(p_quantity) + 1);
+				var p_quantity = $(this).parentsUntil('td').('.p-quantity').attr('value');
+				alert(p_quantity);
+				 //$(this).parent().parent().parent().('.p-quantity').val(parseInt(p_quantity) + 1);
 			});
-
+			
 			$('.quantity-container .down').click(function () {
-				var p_quantity = $(this).parent().parent().('.p-quantity').attr('value');
-				if(parseInt(p_quantity) > 1)
-					$(this).parent().parent().('.p-quantity').val(parseInt(p_quantity) - 1);
-			})
+				var p_quantity = $(this).parent().parent().parent().('.p-quantity').attr('value');
+				if(parseInt(p_quantity) > 1) {
+					 $(this).parent().parent().parent().('.p-quantity').val(parseInt(p_quantity) - 1);
+				}
+			});
 		})
 	</script>
 </head>
@@ -214,7 +205,7 @@
 								<td class="title"><a href="#">Kệ Tivi 2</a></td>
 								<td class="price">9.990.000</td>
 								<td class="quantity-container">
-									<input type="text" id="purchase_quantity" class="p-quantity" value="1" />
+									<input type="text" class="p-quantity" value="1" />
 									<ul class="btn-container">
 										<li><button type="button" class="up"></button></li>
 										<li><button type="button" class="down"></button></li>
@@ -228,7 +219,7 @@
 								<td class="title"><a href="#">Giường ngủ 1</a></td>
 								<td class="price">7.800.000</td>
 								<td class="quantity-container">
-									<input type="text" id="purchase_quantity" class="p-quantity" value="1" />
+									<input type="text" class="p-quantity" value="1" />
 									<ul class="btn-container">
 										<li><button type="button" class="up"></button></li>
 										<li><button type="button" class="down"></button></li>

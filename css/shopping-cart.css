@@ -141,8 +141,23 @@ Desc: Style for shopping-cart
 
 #customer-supporter{
 	border:1px solid #BBBABA;
+	padding: 10px 14px 20px 14px;
 }
 #customer-supporter h1{
 	background: url(../images/support-icon.png) no-repeat left center;
 	border:0;
+	padding-left: 36px;
+}
+#customer-supporter h3{
+	margin-left: 14px;
+	margin-top: 20px;
+}
+#customer-supporter h3 a{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+	color: #16A1C4; 
+}
+#customer-supporter h3 a:hover{
+	text-decoration: underline;
 }
