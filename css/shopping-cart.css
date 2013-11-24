@@ -29,10 +29,55 @@ Desc: Style for shopping-cart
 	width: 104px;
 	height: 94px;
 }
+#f-shopping-cart .tbl-products-in-cart tbody td{
+	padding:15px 10px;
+}
+#f-shopping-cart .tbl-products-in-cart tbody tr.odd td{
+	background-color:#f2f1f1;
+}
+#f-shopping-cart .tbl-products-in-cart .btn-container button:focus{
+	outline: 0;
+}
+#f-shopping-cart .tbl-products-in-cart .btn-container button.up{
+	background: url(../images/arrow-up-red.png) no-repeat center center;
+}
+#f-shopping-cart .tbl-products-in-cart .btn-container button.down{
+	background: url(../images/arrow-down-cyan.png) no-repeat center center;
+}
+#f-shopping-cart .tbl-products-in-cart td.btn-delete{
+	padding: 5px 10px 0 5px;
+}
+#f-shopping-cart .tbl-products-in-cart td.btn-delete button{
+	background: url(../images/close-icon.png) no-repeat center center;
+	padding: 7px;
+	border: 0;
+	cursor: pointer;
+}
+#f-shopping-cart .tbl-products-in-cart td.btn-delete button:focus{
+	outline: 0;
+}
+#f-shopping-cart .tbl-products-in-cart td.btn-delete button:hover{
+	background: url(../images/close-icon-hover.png) no-repeat center center;
+}
+#f-shopping-cart .tbl-products-in-cart td.image{
+	width:104px;
+	padding-left:0;
+	padding-right:0;
+}
+#f-shopping-cart .tbl-products-in-cart td.title a{
+	font-weight: bold;
+	color: #16A1C4;
+	text-decoration: none;
+}
+#f-shopping-cart .tbl-products-in-cart td.price {
+	font-family:"Helvetica Neue", Tahoma, "Liberation Sans", FreeSans, sans-serif;
+	font-weight: bold;
+}
 #f-shopping-cart .tbl-products-in-cart td.quantity-container{
-	padding: 10px 0 10px 10px;
+	padding: 11px 0 10px 10px;
 	position: relative;
 	vertical-align: text-top;
+	width: 102px;
 }
 #f-shopping-cart .tbl-products-in-cart td select:focus,
 #f-shopping-cart .tbl-products-in-cart td input:focus{
@@ -64,12 +109,29 @@ Desc: Style for shopping-cart
 	border: none;
 	cursor: pointer;
 }
-#f-shopping-cart .tbl-products-in-cart .btn-container button:focus{
-	outline: 0;
+#f-shopping-cart .transit_fee,
+#f-shopping-cart .total,
+#f-shopping-cart .charge{
+	margin: 16px;
+	text-align: right;
 }
-#f-shopping-cart .tbl-products-in-cart .btn-container button.up{
-	background: url(../images/arrow-up-red.png) no-repeat center center;
+#f-shopping-cart .total{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 18px;
+	color: #232222;
 }
-#f-shopping-cart .tbl-products-in-cart .btn-container button.down{
-	background: url(../images/arrow-down-cyan.png) no-repeat center center;
+#f-shopping-cart .total .txt-total{
+	border:1px solid #16A1C4;
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+	min-width: 200px;
+	text-align: right;
+	font-size: 18px;
+	font-family:"Helvetica Neue", Tahoma, "Liberation Sans", FreeSans, sans-serif;
+	font-weight: bold;
+	display: inline-block;
+}
+#f-shopping-cart .charge button{
+	width: 160px;
 }
