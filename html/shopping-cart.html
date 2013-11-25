@@ -10,17 +10,26 @@
 		$(document).ready(function(){
 			//[thien.nguyen] Handle quantity up/down button
 			$('.quantity-container .up').click(function () {
-				var p_quantity = $(this).parentsUntil('td').('.p-quantity').attr('value');
-				alert(p_quantity);
-				 //$(this).parent().parent().parent().('.p-quantity').val(parseInt(p_quantity) + 1);
+				var p_quantity = $(this).parent().parent().parent().children('.p-quantity').attr('value');
+				$(this).parent().parent().parent().children('.p-quantity').val(parseInt(p_quantity) + 1);
+				ShowUpdateButton(true);
 			});
-			
 			$('.quantity-container .down').click(function () {
-				var p_quantity = $(this).parent().parent().parent().('.p-quantity').attr('value');
-				if(parseInt(p_quantity) > 1) {
-					 $(this).parent().parent().parent().('.p-quantity').val(parseInt(p_quantity) - 1);
+				var p_quantity = $(this).parent().parent().parent().children('.p-quantity').attr('value');
+				if(p_quantity > 1) {
+					$(this).parent().parent().parent().children('.p-quantity').val(parseInt(p_quantity) - 1);
 				}
+				ShowUpdateButton(true);
 			});
+
+			function ShowUpdateButton(isEnabled){
+				if(isEnabled){
+					$('#btn-update-cart').show();
+				}
+				else {
+					$('#btn-update-cart').on();	
+				}
+			}
 		})
 	</script>
 </head>
@@ -127,9 +136,7 @@
 		<div id="breackcrumbs" class="grid_16">
 			<ul>
 				<li><a href="index.html">Trang chủ</a></li>
-				<li><a href="#">Sản phẩm</a></li>
-				<li><a href="#">Phòng khách</a></li>
-				<li><a href="#">Kệ ti vi và giá sách</a></li>
+				<li><a href="#">Giỏ hàng</a></li>
 			</ul>
 		</div>
 		<div class="clear"></div>
@@ -139,7 +146,7 @@
 				<ul>
 					<li><a href="#" >Phòng khách</a>
 						<ul>
-							<li><a href="#" class="active">Kệ ti vi và giá sách</a></li>
+							<li><a href="#">Kệ ti vi và giá sách</a></li>
 							<li><a href="#">Sofa</a></li>
 							<li><a href="#">Tủ rượu, tủ trang trí</a></li>
 						</ul>
@@ -237,7 +244,8 @@
 						<div class="txt-total price">20.000.000 VND</div>
 					</div>
 					<div class="charge">
-						<button class="btn-style btn-cyan">Thanh toán</button>
+						<button type="submit" id="btn-update-cart" class="btn-style btn-cyan">Cập nhật giỏ hàng</button>
+						<button type="submit" id="btn-charge" class="btn-style btn-cyan">Thanh toán</button>
 					</div>
 				</form>
 			</section><!-- end of shopping-cart -->

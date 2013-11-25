@@ -75,6 +75,7 @@ Desc: Style for shopping-cart
 #f-shopping-cart .tbl-products-in-cart td.price {
 	font-family:"Helvetica Neue", Tahoma, "Liberation Sans", FreeSans, sans-serif;
 	font-weight: bold;
+	text-align: right;
 }
 #f-shopping-cart .tbl-products-in-cart td.quantity-container{
 	padding: 11px 0 10px 10px;
@@ -137,6 +138,7 @@ Desc: Style for shopping-cart
 }
 #f-shopping-cart .charge button{
 	width: 160px;
+	margin-left: 10px;
 }
 
 #customer-supporter{
@@ -160,4 +162,7 @@ Desc: Style for shopping-cart
 }
 #customer-supporter h3 a:hover{
 	text-decoration: underline;
+}
+#btn-update-cart{
+	display: none;
 }
