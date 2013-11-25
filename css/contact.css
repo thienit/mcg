@@ -1,0 +1,57 @@
+/*   
+Author: Thien Nguyen
+Author URI: http://nathiwos.com
+Version: 0.0.1
+Desc: Style for contact page
+*/
+#contact .company-info{
+	margin-top: 40px;
+}
+#contact .company-info h3{
+
+}
+#contact .company-info p{
+	margin-top: 10px;
+}
+#contact .company-info a{
+	color: inherit;
+	text-decoration: none;
+}
+
+#contact .map{
+	margin-top: 20px;
+}
+#google-map{
+	margin-top: 16px;
+	width: 700px;
+	height: 490px;
+}
+
+
+#contact .contact-form{
+	margin-top: 20px;
+}
+#contact .contact-form table{
+	border: 0;
+}
+#contact .contact-form td{
+	border: 0;
+	padding: 10px;
+	vertical-align: middle;
+}
+#contact .contact-form input{
+	width: 300px;
+	height: 28px;
+	padding: 0 10px;
+}
+#contact .contact-form input:focus{
+	outline: 0;
+}
+#contact .contact-form textarea{
+	width: 420px;
+	height: 164px;
+	resize: none;
+}
+#contact .contact-form textarea:focus{
+	outline: 0;
+}
