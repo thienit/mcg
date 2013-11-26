@@ -5,14 +5,16 @@ Version: 0.0.1
 Desc: Style for articles page
 */
 /**************** ARTICLES STYLE ****************/
+article .folder-title{
+	margin-top: 10px;
+}
 article .folder-title h1{
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-	color: #2E2D2D;
-	margin: 30px 0;
-	border-bottom: 1px dashed #BABABA;
-	padding-bottom: 30px;
-	padding-left:200px;
-	position: relative;
+	font-size: 36px;
+	font-weight: normal;
+	color: #232222;
+	padding: 20px 0 10px 0;
+	border-bottom: 1px solid #D8D5D5;
 }
 article section{
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
@@ -22,6 +24,7 @@ article section{
 	padding-bottom: 30px;
 	padding-left:200px;
 	position: relative;
+	overflow: hidden;
 }
 article section h1{
 	font-size: 28px;
@@ -72,4 +75,25 @@ article section .more-view{
 }
 article section .more-view:hover{
 	text-decoration: underline;
+}
+
+#article-detail {
+	padding-left:0px;
+}
+#article-detail .post-title{
+	font-size: 36px;
+}
+#article-detail  .post-content h1,
+#article-detail  .post-content h2,
+#article-detail  .post-content h3,
+#article-detail  .post-content h4,
+#article-detail  .post-content h5,
+#article-detail  .post-content h6{
+	font-weight: normal;
+	margin-top:24px;
+	color:#232222;
+	margin-bottom: 20px;
+}
+#article-detail  .post-content p{
+	margin:10px 0;
 }
