@@ -109,6 +109,7 @@ header{
 #searching input{
 	width: 200px;
 	padding-right: 20px;
+	height: 18px;
 }
 
 #searching button{
@@ -117,7 +118,7 @@ header{
 	background: url(../images/search-icon.png) no-repeat center center;
 	border: none;
 	position: absolute;
-	top: 5px;
+	top: 3px;
 	right: 0px;
 }
 
@@ -460,4 +461,9 @@ aside .widget h1{
 .pagination a.active{
 	color: #16A1C4;	
 	cursor: default;
+}
+
+/**************** SEARCHING STYLE ****************/
+#searching-result h3{
+	margin-top: 20px;
 }
