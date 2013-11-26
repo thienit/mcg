@@ -1,0 +1,75 @@
+/*   
+Author: Thien Nguyen
+Author URI: http://nathiwos.com
+Version: 0.0.1
+Desc: Style for articles page
+*/
+/**************** ARTICLES STYLE ****************/
+article .folder-title h1{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	color: #2E2D2D;
+	margin: 30px 0;
+	border-bottom: 1px dashed #BABABA;
+	padding-bottom: 30px;
+	padding-left:200px;
+	position: relative;
+}
+article section{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	color: #2E2D2D;
+	margin: 30px 0;
+	border-bottom: 1px dashed #BABABA;
+	padding-bottom: 30px;
+	padding-left:200px;
+	position: relative;
+}
+article section h1{
+	font-size: 28px;
+	font-weight: normal;
+	color: #232222;
+}
+article section a{
+	text-decoration: none;
+	color: inherit;
+}
+article section .illus{
+	width: 180px;
+	max-height: 200px;
+	background: #F1F0F1;
+	position: absolute;
+	top: 5px;
+	left: 0;
+}
+article section .illus img{
+	width: 180px;
+	max-height: 200px;
+}
+article section .meta{
+	margin-top: 10px;
+	color: #16a1c4;
+}
+article section .meta div{
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 24px;
+	margin-right: 20px;
+}
+article section .post-date {
+	background:url(../images/calendar-16x16.png) no-repeat left center;
+}
+article section .post-cat {
+	background:url(../images/cat-16x16.png) no-repeat left center;
+}
+article section .desc{
+	margin-top: 16px;
+}
+article section .more-view{
+	display: block;
+	color: #16a1c4;
+	font-size: 16px;
+	margin-top: 10px;
+}
+article section .more-view:hover{
+	text-decoration: underline;
+}

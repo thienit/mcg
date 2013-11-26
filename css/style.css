@@ -147,6 +147,9 @@ header{
 #main-menu ul li:hover{
 	background-color: #40BEEF;
 	transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-ms-transition-duration: 0.3s;
 	color: #FFFFFF;
 }
 #main-menu ul li a{
@@ -301,6 +304,9 @@ footer .copyright{
 	text-decoration: none;
 	color: #16a1c4;
 	font-size: 14px;
+}
+#breackcrumbs a:hover{
+	text-decoration: underline;
 }
 
 /**************** ASIDE STYLE ****************/
