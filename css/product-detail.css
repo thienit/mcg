@@ -138,7 +138,7 @@ Desc: Style for product-detail block;
 
 #product-detail .detail .tab_content{
 	border-top: 1px solid #D8D5D5;
-	margin-top: 85px;
+	margin-top: 0px;
 }
 
 #product-detail .detail .tab_content h1,
