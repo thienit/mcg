@@ -5,6 +5,22 @@
 	<title>Nội Thất MCG::Trang Chủ</title>
 	<link rel="stylesheet" href='../css/style.css' />
 	<link rel="stylesheet" href='../css/home.css' />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var sIndex = 1;
+			setInterval(changeSlide,3000);
+
+			/*----------functions-------------*/
+			function changeSlide(){
+				sIndex++;
+				if(sIndex>5) {
+					sIndex = 1;
+				}
+			 	$('#s'+sIndex).attr('checked',true);
+			}
+		})
+	</script>
 </head>
 
 <body class="homepage">
