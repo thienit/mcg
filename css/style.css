@@ -60,6 +60,15 @@ a:hover{
 	position: relative;
 }
 
+#top-bar .email{
+	padding-left: 30px;
+	height: 28px;
+	line-height: 28px;
+	background:url(../images/email.png) no-repeat left center;
+	font-size: 14px;
+	color: #e84545;
+}
+
 #top-bar .hotline{
 	padding-left: 20px;
 	height: 28px;
