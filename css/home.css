@@ -5,11 +5,11 @@ Version: 0.0.1
 */  
 
 /**************** HOME PAGE SECTION STYLE ****************/
-.homepage section{
+.home section{
 	margin-top: 50px;
 }
 
-.homepage section h1{
+.home section h1{
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 	font-size: 36px;
 	font-weight: normal;
@@ -17,224 +17,101 @@ Version: 0.0.1
 	padding: 20px 0 10px 0;
 	border-bottom: 1px solid #D8D5D5;
 }
+/**************** BANNER STYLE ****************/
+#banner{
+	margin-top: 30px;
+}
+#banner .grip_16{
+	position: relative;
+	height: 340px;
+}
+#banner h1{
+	position: absolute;
+	display: block;
+	font-size: 30px;
+	height: 48px;
+	width: 940px;
+	line-height: 46px;
+	padding: 0 20px 0 50px;
+	border-bottom: 0;
+	background: url(../images/banner-title-bg.png) no-repeat;
+}
+#banner img{
+	height: 340px;
+	width: 940px;
+}
 /**************** SLIDESHOW STYLE ****************/
 #slideshow{
-	margin-top: 36px;
-}
-#slideshow .grid_16{
-	background-color: #EEEEEE;
-	height: 375px;
-	position: relative;
-	
-}
-
-/*#slideshow .slide{
-	position: absolute;
-	top:50px;
-	left: 20px;
-}*/
-#slideshow .slide img{
-	position: absolute;
-	top:40px;
-	left:20px;
-	width: 500px;
-	height: 280px;
-	opacity: 0;
-	transition: all 0.8s ease-in-out 0s;
-	-webkit-transition: all 0.8s ease-in-out 0s;
-	-ms-transition: all 0.8s ease-in-out 0s;
-	-moz-transition: all 0.8s ease-in-out 0s;
-	visibility: hidden;
-
-}
-#slideshow .slide input:checked ~ img{
-	visibility: visible;
-	opacity: 1;
-}
-#slideshow .slide .desc{
-	position: absolute;
-	top: 60px;
-	left: 550px;
-	padding-right: 10px;
-	width: 360px;
-	height: 310px;
-	overflow: hidden;
-	visibility: hidden;
-	opacity: 0;
-	transition: all 0.5s ease-in-out 0s;
-	-webkit-transition: all 0.5s ease-in-out 0s;
-	-moz-transition: all 0.5s ease-in-out 0s;
-	-ms-transition: all 0.5s ease-in-out 0s;
-	background-color: #EEEEEE;
-}
-#slideshow .slide input:checked ~ .desc{
-	opacity: 1;
-	visibility: visible;
-}
-#slideshow .slide h1{
-	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-	color: #3C3C3C;
-	font-size: 52px;
-	padding: 0;
-	border-bottom: 0;
-	
-}
-
-#slideshow .slide h2{
-	font-size: 32px;
-	margin-top: 30px;
-	font-weight: normal;
-	color: #1B1B1B;
-}
-
-#slideshow .slide h3{
-	font-size: 36px;
-	margin-top: 30px;
-	font-weight: normal;
-	transition: all 1s ease-in-out 0s;
-	-moz-transition: all 1s ease-in-out 0s;
-	-webkit-transition: all 1s ease-in-out 0s;
-	-ms-transition: all 1s ease-in-out 0s;
-}
-
-
-#slideshow .slide a{
-	text-decoration: none;
-	color: inherit;
-}
-#slideshow .slide a:hover{
-	text-decoration: none;
-	color: inherit;
-}
-#slideshow .slide input{
-	display: none;
-}
-
-#slideshow .slide .s-nav{
-	position: absolute;
-	top: 10px;
-	right: 82px;
-	padding: 0;
-	width: 14px;
-	height: 14px;
-	background-color: #232222;
-	display: inline-block;
-	cursor: pointer;
-	z-index: 999;
-}
-#slideshow .slide:nth-child(2) .s-nav{
-	right: 64px;
-}
-#slideshow .slide:nth-child(3) .s-nav{
-	right: 46px;
-}
-#slideshow .slide:nth-child(4) .s-nav{
-	right: 28px;
-}
-#slideshow .slide:nth-child(5) .s-nav{
-	right: 10px;
-}
-#slideshow .slide input:checked ~ .s-nav{
-	background-color: #16A1C4;
-}
-#slideshow .pagi li.active{
-	background-color: #16A1C4;
-}
-#slideshow .pagi li:hover{
-	
-}
- 
-
-/**************** ABOUT-COMPANY STYLE ****************/
-#about-company{
-	background-color: #16A1C4;
-	height: 450px;
-	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-	color: #FFFFFF;
-}
-#about-company h1{
-	color: #FFFFFF;
-	border-bottom: 1px solid #FFFFFF;
-}
-#about-company h2{
-	font-weight: normal;
-	font-size: 24px;
-	margin-top: 14px;
-	margin-bottom: 84px;
-}
-#about-company p{
-	font-size: 18px;
-}
-#about-company a{
-	text-decoration: none;
-	color: inherit;
-}
-#about-company a:hover{
-	text-decoration: underline;
-	color: inherit;
-}
-#about-company .direction{
-	margin-top: 14px;
-}
-#about-company .direction div{
-	border: 1px solid #FFFFFF;
-	padding: 10px;
-	margin-top: 20px;
-}
-#about-company .direction div img{
-	margin: 5px;
+	height: 270px;
+	background-color: #16A1C4; 
 }
 
 /**************** PRODUCT-TILES STYLE ****************/
+#product-tiles{
+	margin-top: 30px;
+}
 #product-tiles .grid_4{
 	margin-top: 20px;
-	color: #FFFFFF;
+	color: #232222;
 	position: relative;
 	overflow: hidden;
+	background-color: #ece9e9;
+	height: 440px;
+	display: block;
 }
 #product-tiles h1{
 	margin-bottom: 20px;
 }
 #product-tiles .grid_4 img{
-	width: 220px;
-	height: 220px;
+	margin:12px;
+	width: 196px;
+	height: 196px;
 }
 #product-tiles .grid_4 a{
 	color: inherit;
 	text-decoration: none;
 }
 #product-tiles .grid_4 a:hover{
-	text-decoration: underline;
+	color: #16A1C4;
 }
 #product-tiles .grid_4 > ul{
-	position: absolute;
-	top: 0;
-	left: 220px;
-	background-color: #383f41;
-	opacity: 0.91;
-	width: 160px;
-	height: 200px;
 	padding: 10px;
-	transition: left  0.6s  ease-out;
-	-webkit-transition: left  0.6s  ease-out;
-	-ms-transition: left  0.6s  ease-out;
-	-moz-transition: left  0.6s  ease-out;
 }
-#product-tiles .grid_4:hover > ul{
-	left: 40px;
-}
+
 #product-tiles .grid_4 > ul > li > a{
 	font-size: 18px;
 	font-weight: bold;
 }
 
 #product-tiles .grid_4 > ul ul li{
-	margin-top: 14px;
+	margin-top: 10px;
 	margin-left: 10px;
 }
 
 #product-tiles .grid_4 > ul ul a{
 	font-size: 14px;
+}
+
+#product-tiles .grid_4 .more-detail{
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 24px;
+	text-align: center;
+	background-color: #4d5355;
+	transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-ms-transition-duration: 0.3s;
+	
+}
+#product-tiles .grid_4 .more-detail a{
+	color: #FFFFFF;
+	text-decoration: none;
+	display: block;
+	line-height: 24px;
 }
 
 /**************** ARTICLES STYLE ****************/

@@ -167,7 +167,7 @@ header{
 	text-decoration: none;
 	font-size: 14px;
 	color: inherit;
-	padding: 7px 10px 5px 10px;
+	padding: 7px 5px 5px 5px;
 }
 
 #main-menu ul ul{
@@ -180,7 +180,7 @@ header{
 	z-index:1000;
 }
 
-#main-menu ul li:hover ul{
+#main-menu ul li:hover > ul{
 	display: block;
 }
 
@@ -188,9 +188,9 @@ header{
 	color: #FFFFFF;
 }
 #main-menu ul ul li{
-	width: 190px;
+	width: 185px;
 	margin-left: 0px;
-	padding-left: 10px;
+	padding-left: 15px;
 }
 #main-menu ul ul li::before{
 	content: "\25B6";
@@ -201,6 +201,10 @@ header{
 }
 #main-menu ul ul li:hover{
 	background-color: #00A7EF; 
+}
+#main-menu ul ul ul{
+	top:0px;
+	left:200px;
 }
 
 /**************** NAV STYLE ****************/
@@ -482,4 +486,34 @@ aside .widget h1{
 /**************** SEARCHING STYLE ****************/
 #searching-result h3{
 	margin-top: 20px;
+}
+
+/**************** SROLL SLIDE STYLE ****************/
+#slideshow .scrollableArea{
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+#slideshow .scrollableArea .product{
+	margin-left: 20px;
+	margin-top: 24px;
+	position: relative;
+	display: block;
+}
+#slideshow .scrollableArea .product .product-name{
+	color: #FFFFFF;
+}
+#slideshow .scrollableArea .product .price,
+#slideshow .scrollableArea .product .old-price{
+	border-bottom: 0;
+}
+#slideshow .scrollableArea .product a:hover{
+	color: #FFFFFF;
 }
