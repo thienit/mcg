@@ -13,7 +13,7 @@
 	<link rel="shortcut icon" href="../images/mcg.ico" type="image/ico" />
 
 	<!-- jQuery library -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 	<!-- jQuery UI (Custom Download containing only Widget and Effects Core)  -->
 	<script src="../js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
 	
@@ -28,11 +28,23 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-			$("#makeMeScrollable").smoothDivScroll({
+			$("#product-scrolling").smoothDivScroll({
 				mousewheelScrolling: "allDirections",
 				manualContinuousScrolling: true,
-				autoScrollingMode: "onStart"
+				autoScrollingMode: "onStart",
+				autoScrollingStep: 1,
+				autoScrollingInterval:30,
+				touchScrolling: true,
+				mousewheelScrolling:""
 			});
+
+			// $(".scrollling-control .left_round").mouseenter(function() {
+			//   	$( "#product-scrolling .scrollingHotSpotLeft" ).trigger( "mouseleave" );
+			//  // 	$( "#product-scrolling .scrollingHotSpotLeftVisible" ).trigger( "mouseenter" );
+			// }).mouseleave(function(){
+			// 	$( "#product-scrolling .scrollingHotSpotLeft" ).trigger( "mouseenter" );
+			// //  	$( "#product-scrolling .scrollingHotSpotLeftVisible" ).trigger( "mouseleave" );
+			// });
 		});
 	</script>
 </head>
@@ -167,53 +179,69 @@
 	</section>
 
 	<section id="slideshow">
-		<div id="makeMeScrollable" class="container_16">
-			<div class="scrollingHotSpotLeft scrollingHotSpotLeftVisible"></div>
-			<div class="scrollingHotSpotRight scrollingHotSpotRightVisible"></div>
-			<div class="grid_16 scrollWrapper">
-				<div class="scrollableArea">
-					<div class="product contentBox ">
+		<div class="container_16">
+			<!-- <div class="scrollling-control grid_16">
+				<div class="left_round">&nbsp;</div>
+				<div class="right_round">&nbsp;</div>
+			</div> -->
+			<div id="product-scrolling" class="grid_16">
+				<div class="contentBox">
+					<div class="product">
 						<a href="#"><a href="#"><img src="../images/products/pk1.jpg"/></a>
 						<p class="product-name"><a href="#">Mẫu sản phẩm 1</a></p>
 						<p class="price">9.990.000 VND</p>
 					</div>
-					<div class="product contentBox ">
+				</div>
+				<div class="contentBox">
+					<div class="product">
 						<a href="#"><img src="../images/products/pk2.jpg"/></a>
 						<p class="product-name"><a href="#">Mẫu sản phẩm 2</a></p>
 						<p class="price">9.990.000 VND</p>
 					</div>
-					<div class="product contentBox ">
+				</div>
+				<div class="contentBox">
+					<div class="product">
 						<a href="#"><img src="../images/products/pk3.jpg"/></a>
 						<p class="product-name"><a href="#">Mẫu sản phẩm 3</a></p>
 						<p class="price">9.990.000 VND</p>
 					</div>
-					<div class="product contentBox ">
+				</div>
+				<div class="contentBox">
+					<div class="product">
 						<a href="#"><img src="../images/products/pk4.jpg"/></a>
 						<p class="product-name"><a href="#">Mẫu sản phẩm 4</a></p>
 						<p class="price">9.990.000 VND</p>
 					</div>
-					<div class="product contentBox ">
+				</div>
+				<div class="contentBox">
+					<div class="product">
 						<a href="#"><a href="#"><img src="../images/products/pa1.jpg"/></a>
 						<p class="product-name"><a href="#">Mẫu sản phẩm 5</a></p>
 						<p class="price">9.990.000 VND</p>
 					</div>
-					<div class="product contentBox ">
+				</div>
+				<div class="contentBox">
+					<div class="product">
 						<a href="#"><img src="../images/products/pa2.jpg"/></a>
 						<p class="product-name"><a href="#">Mẫu sản phẩm 6</a></p>
 						<p class="price">9.990.000 VND</p>
 					</div>
-					<div class="product contentBox ">
+				</div>
+				<div class="contentBox">
+					<div class="product">
 						<a href="#"><img src="../images/products/pa3.jpg"/></a>
 						<p class="product-name"><a href="#">Mẫu sản phẩm 7</a></p>
 						<p class="price">9.990.000 VND</p>
 					</div>
-					<div class="product contentBox ">
+				</div>
+				<div class="contentBox">
+					<div class="product">
 						<a href="#"><img src="../images/products/pa4.jpg"/></a>
 						<p class="product-name"><a href="#">Mẫu sản phẩm 8</a></p>
 						<p class="price">9.990.000 VND</p>
 					</div>
 				</div>
-			</div><!-- end of scroll-wrapper -->
+			</div><!-- end of .grid_16 -->
 		</div>
 	</section>
 
@@ -372,6 +400,37 @@
 	<footer>
 		<div class="company-info ">
 			<div class="container_16">
+				<div class="menu grid_4">
+					<p>NỘI THẤT GIA ĐÌNH</p>
+					<ul>
+						<li><a href="#">Kệ tivi</a></li>
+						<li><a href="#">Bàn trà</a></li>
+						<li><a href="#">Tủ quần áo</a></li>
+						<li><a href="#">Giường ngủ</a></li>
+						<li><a href="#">Vách ngăn</a></li>
+						<li><a href="#">Tủ bếp</a></li>
+						<li><a href="#">Tủ giày</a></li>
+						<li><a href="#">Kệ treo tường</a></li>		
+					</ul>
+				</div>
+				<div class="menu grid_4">
+					<p>MENU</p>
+					<ul>
+						<li><a href="#">Trang chủ</a></li>
+						<li><a href="#">Nội thất gia đình</a></li>
+						<li><a href="#">Nội thất văn phòng</a></li>
+						<li><a href="#">Đồ trang trí</a></li>
+						<li><a href="#">Thiết kế nội thất</a></li>
+						<li><a href="#">Công trình thi công</a></li>
+						<li><a href="#">Xưởng sx</a></li>
+						<li><a href="#">Liên hệ</a></li>		
+					</ul>
+				</div>
+				<div class="contact grid_6">
+					<div class="hotline">Hotline: (04)6 269 8265</div>
+					<div class="email">Email: noithat.mcg@gmail.com</div>
+				</div>
+				<div class="clear"></div>
 				<div class="grid_16">
 					<h3>Công ty TNHH Kiến trúc Nội thất MCG</h3>
 					<p>Địa chỉ: Tòa nhà F5, Khu Đô thị mới Yên Hòa, Cầu Giấy, Hà Nội</p>

@@ -274,7 +274,7 @@ footer a{
 	color: inherit;
 }
 footer a:hover{
-	text-decoration: underline;
+	text-decoration: none;
 }
 footer .company-info{
 	padding: 20px 0 30px 0;
@@ -291,6 +291,43 @@ footer .company-info p{
 	color: #494749;
 	margin-top: 10px;
 }
+footer .company-info .menu{
+	background-color: #dbeffc;
+	padding: 10px;
+	color: #494749;
+	text-align: left;
+	margin-bottom: 20px;
+}
+footer .company-info .menu p{
+	margin-top: 0;
+}
+footer .company-info .menu ul{
+	margin-left: 10px;
+}
+footer .company-info .menu li{
+	margin: 2px;
+}
+
+
+footer .company-info .contact{
+	background-color: #dbeffc;
+	padding: 10px;
+	text-align: left;
+	min-height: 188px;
+}
+footer .company-info .contact .hotline,
+footer .company-info .contact .email{
+	font-size: 18px;
+	color:#e84545;
+	padding: 10px 0 5px 40px;
+}
+footer .company-info .contact .hotline{
+	background: url(../images/phone_big.png) no-repeat 10px center;
+}
+footer .company-info .contact .email{
+	background: url(../images/email_big.png) no-repeat center left;
+}
+
 footer .copyright{
 	background-color: #151414;
 	text-align: right;
@@ -489,7 +526,41 @@ aside .widget h1{
 }
 
 /**************** SROLL SLIDE STYLE ****************/
-#slideshow .scrollableArea{
+/**************** SLIDESHOW STYLE ****************/
+#slideshow{
+	height: 270px;
+	background-color: #16A1C4; 
+}
+/*#slideshow .scrollling-control{
+	position: relative;
+}
+
+#slideshow .scrollling-control .left_round{
+	cursor: pointer;
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: 110px;
+	left: -50px;
+	background: url(../images/left_round-32.png) no-repeat center;
+}
+#slideshow .scrollling-control .right_round{
+	cursor: pointer;
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: 110px;
+	right: -50px;
+	background: url(../images/right_round-32.png) no-repeat center;
+}*/
+#product-scrolling {
+	position: relative;
+}
+#product-scrolling .scrollWrapper{
+	overflow: hidden;
+}
+#product-scrolling div.scrollableArea
+{
 	position: relative;
 	display: block;
 	float: left;
@@ -501,19 +572,44 @@ aside .widget h1{
 	-o-user-select: none;
 	user-select: none;
 }
-#slideshow .scrollableArea .product{
+#product-scrolling .contentBox {
+	position: relative;
+	float: left;
+	display: block;
+	width: 160px;
+	height: 250px;
 	margin-left: 20px;
 	margin-top: 24px;
-	position: relative;
-	display: block;
 }
-#slideshow .scrollableArea .product .product-name{
+#product-scrolling .product .product-name{
 	color: #FFFFFF;
 }
-#slideshow .scrollableArea .product .price,
-#slideshow .scrollableArea .product .old-price{
+#product-scrolling .product .price,
+#product-scrolling .product .old-price{
 	border-bottom: 0;
 }
-#slideshow .scrollableArea .product a:hover{
+#product-scrolling .product a:hover{
 	color: #FFFFFF;
+}
+#product-scrolling .scrollingHotSpotLeft{
+	cursor: pointer;
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: 110px;
+	left: -50px;
+	background: url(../images/left_round-32.png) no-repeat center;
+}
+#product-scrolling .scrollingHotSpotRight{
+	cursor: pointer;
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: 110px;
+	right: -50px;
+	background: url(../images/right_round-32.png) no-repeat center;
+}
+#product-scrolling .scrollingHotSpotLeftVisible,
+#product-scrolling .scrollingHotSpotRight{
+	opacity: 1 !important;
 }
