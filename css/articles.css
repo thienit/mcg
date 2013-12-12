@@ -94,5 +94,8 @@ article section .more-view:hover{
 	margin-bottom: 20px;
 }
 #article-detail  .post-content p{
-	margin:10px 0;
+	margin:20px 0;
+}
+#article-detail .post-content .wp-caption{
+	margin:20px;
 }
