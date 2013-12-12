@@ -1,0 +1,154 @@
+/*   
+Author: Thien Nguyen
+Author URI: http://nathiwos.com
+Version: 0.0.1
+Desc: Style for product-detail block;
+*/
+#product-detail {
+	margin-top: 24px;
+}
+#product-detail .big-image img{
+	width: 400px;
+	max-height: 500px;
+}
+#product-detail .gallery-thumbs{
+	margin-top: 36px;
+}
+#product-detail .gallery-thumbs li{
+	display: inline-block;
+	margin-right: 10px;
+	cursor: pointer;
+}
+#product-detail .gallery-thumbs img{
+	width: 60px;
+	height: 50px;
+}
+#product-detail .summary{
+	overflow: hidden;
+}
+#product-detail .summary h1,
+#product-detail .summary h2{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-weight: normal;
+	margin-bottom: 30px;
+}
+#product-detail .summary h1{
+	font-size: 24px;
+	color: #232222;
+}
+#product-detail .summary h2.old-price{
+	margin-bottom: 15px;	
+}
+#product-detail .summary h1.price{
+	color: #EF3F47;
+}
+
+#product-detail .summary p{
+	margin: 8px 0;
+}
+#product-detail .summary label{
+	color: #232222; 
+	font-weight: bold;
+}
+#product-detail .summary .purchase{
+	height: 165px;
+	border: 1px solid #BBBABA;
+	margin-top: 20px;
+	overflow: hidden;
+}
+#product-detail .summary .purchase table{
+	border-collapse: collapse;
+}
+#product-detail .summary .purchase td{
+	padding: 10px 0 10px 10px;
+	vertical-align: middle;
+	position: relative;
+}
+#product-detail .summary .purchase td select{
+	width: 176px;
+}
+#product-detail .summary .purchase td select:focus,
+#product-detail .summary .purchase td input:focus{
+	outline: 0;
+}
+#product-detail .summary .purchase td input{
+	padding: 11px 10px 10px 10px;
+	padding-right: 16px;
+	text-align: center;
+	width: 50px;
+	border: 1px solid #e8e6e6;
+	border-right: 15px solid #BBBABA;
+	background-color: #FAFAFA;
+}
+#product-detail .summary .purchase td .btn-container{
+	position: absolute;
+	top: 7px;
+	left: 82px;
+}
+#product-detail .summary .purchase td .btn-container li{
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 20px;
+	height: 20px;
+}
+#product-detail .summary .purchase .btn-container button{
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+}
+#product-detail .summary .purchase .btn-container button:focus{
+	outline: 0;
+}
+#product-detail .summary .purchase .btn-container button.up{
+	background: url(../images/arrow-up-red.png) no-repeat center center;
+}
+#product-detail .summary .purchase .btn-container button.down{
+	background: url(../images/arrow-down-cyan.png) no-repeat center center;
+}
+
+#product-detail .detail{
+	margin-top: 50px;
+	position: relative;
+}
+#product-detail .detail .tabs{
+	margin-left: 15px;
+	height: 42px;
+	position: absolute;
+	top:-42px;
+}
+#product-detail .detail .tabs li{
+	display: inline-block;
+	width: 142px;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	border: 1px solid #BBBABA;
+	border-bottom: 0;
+	margin: 0;
+	float: left;
+	cursor: pointer;
+}
+#product-detail .detail .tabs li.active{
+	background-color: #45B7E3;
+	color: #FFFFFF;
+	border: 0;
+	height: 43px;
+}
+
+#product-detail .detail .tab_content{
+	border-top: 1px solid #D8D5D5;
+	margin-top: 0px;
+}
+
+#product-detail .detail .tab_content h1,
+#product-detail .detail .tab_content h2,
+#product-detail .detail .tab_content h3,
+#product-detail .detail .tab_content h4,
+#product-detail .detail .tab_content h5,
+#product-detail .detail .tab_content h6{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-weight: normal;
+	margin: 20px 0;
+	color: #232222;
+}

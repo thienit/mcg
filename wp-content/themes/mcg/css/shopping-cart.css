@@ -1,0 +1,168 @@
+/*   
+Author: Thien Nguyen
+Author URI: http://nathiwos.com
+Version: 0.0.1
+Desc: Style for shopping-cart
+*/
+#f-shopping-cart{
+	border:1px solid #BBBABA;
+	margin-top: 20px;
+	width: 100%;
+}
+#f-shopping-cart table{
+	border-collapse: collapse;
+	font-size: 14px;
+	width: 100%;
+}
+#f-shopping-cart table td{
+	border: 0;
+}
+#f-shopping-cart .tbl-products-in-cart thead td{
+	font-weight: bold;
+	color: #232222;
+	text-align: center;
+	vertical-align: middle;
+	height: 44px;
+	background-color: #f2f1f1;
+}
+#f-shopping-cart .tbl-products-in-cart img{
+	width: 104px;
+	height: 94px;
+}
+#f-shopping-cart .tbl-products-in-cart tbody td{
+	padding:15px 10px;
+}
+#f-shopping-cart .tbl-products-in-cart tbody tr.odd td{
+	background-color:#f2f1f1;
+}
+#f-shopping-cart .tbl-products-in-cart .btn-container button:focus{
+	outline: 0;
+}
+#f-shopping-cart .tbl-products-in-cart .btn-container button.up{
+	background: url(../images/arrow-up-red.png) no-repeat center center;
+}
+#f-shopping-cart .tbl-products-in-cart .btn-container button.down{
+	background: url(../images/arrow-down-cyan.png) no-repeat center center;
+}
+#f-shopping-cart .tbl-products-in-cart td.btn-delete{
+	padding: 5px 10px 0 5px;
+}
+#f-shopping-cart .tbl-products-in-cart td.btn-delete button{
+	background: url(../images/close-icon.png) no-repeat center center;
+	padding: 7px;
+	border: 0;
+	cursor: pointer;
+}
+#f-shopping-cart .tbl-products-in-cart td.btn-delete button:focus{
+	outline: 0;
+}
+#f-shopping-cart .tbl-products-in-cart td.btn-delete button:hover{
+	background: url(../images/close-icon-hover.png) no-repeat center center;
+}
+#f-shopping-cart .tbl-products-in-cart td.image{
+	width:104px;
+	padding-left:0;
+	padding-right:0;
+}
+#f-shopping-cart .tbl-products-in-cart td.title a{
+	font-weight: bold;
+	color: #16A1C4;
+	text-decoration: none;
+}
+#f-shopping-cart .tbl-products-in-cart td.title a:hover{
+	text-decoration: underline;
+}
+#f-shopping-cart .tbl-products-in-cart td.price {
+	font-family:"Helvetica Neue", Tahoma, "Liberation Sans", FreeSans, sans-serif;
+	font-weight: bold;
+	text-align: right;
+}
+#f-shopping-cart .tbl-products-in-cart td.quantity-container{
+	padding: 11px 0 10px 10px;
+	position: relative;
+	vertical-align: text-top;
+	width: 102px;
+}
+#f-shopping-cart .tbl-products-in-cart td select:focus,
+#f-shopping-cart .tbl-products-in-cart td input:focus{
+	outline: 0;
+}
+#f-shopping-cart .tbl-products-in-cart td.quantity-container input{
+	padding: 11px 10px 10px 10px;
+	padding-right: 16px;
+	text-align: center;
+	width: 50px;
+	border: 1px solid #e8e6e6;
+	border-right: 15px solid #BBBABA;
+	background-color: #FAFAFA;
+}
+#f-shopping-cart .tbl-products-in-cart td.quantity-container .btn-container{
+	position: absolute;
+	top: 7px;
+	left: 82px;
+}
+#f-shopping-cart .tbl-products-in-cart td.quantity-container .btn-container li{
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 20px;
+	height: 20px;
+}
+#f-shopping-cart .tbl-products-in-cart td.quantity-container .btn-container button{
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+}
+#f-shopping-cart .transit_fee,
+#f-shopping-cart .total,
+#f-shopping-cart .charge{
+	margin: 16px;
+	text-align: right;
+}
+#f-shopping-cart .total{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 18px;
+	color: #232222;
+}
+#f-shopping-cart .total .txt-total{
+	border:1px solid #16A1C4;
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+	min-width: 200px;
+	text-align: right;
+	font-size: 18px;
+	font-family:"Helvetica Neue", Tahoma, "Liberation Sans", FreeSans, sans-serif;
+	font-weight: bold;
+	display: inline-block;
+}
+#f-shopping-cart .charge button{
+	width: 160px;
+	margin-left: 10px;
+}
+
+#customer-supporter{
+	border:1px solid #BBBABA;
+	padding: 10px 14px 20px 14px;
+}
+#customer-supporter h1{
+	background: url(../images/support-icon.png) no-repeat left center;
+	border:0;
+	padding-left: 36px;
+}
+#customer-supporter h3{
+	margin-left: 14px;
+	margin-top: 20px;
+}
+#customer-supporter h3 a{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+	color: #16A1C4; 
+}
+#customer-supporter h3 a:hover{
+	text-decoration: underline;
+}
+#btn-update-cart{
+	display: none;
+}
