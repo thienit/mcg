@@ -38,8 +38,8 @@
     		'description'   => 'These are widgets for the sidebar.',
     		'before_widget' => '<div id="%1$s" class="widget %2$s">',
     		'after_widget'  => '</div>',
-    		'before_title'  => '<h2>',
-    		'after_title'   => '</h2>'
+    		'before_title'  => '<h1>',
+    		'after_title'   => '</h1>'
     	));
     }
 

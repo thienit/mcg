@@ -365,6 +365,7 @@ aside .widget{
 	position: relative;
 	padding-top: 50px;
 	padding-bottom: 10px;
+	margin-bottom: 60px;
 }
 aside .widget h1{
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
@@ -411,7 +412,7 @@ aside .widget h1{
 }
 
 #promotion{
-	margin-top: 60px;
+	
 }
 #promotion h1{
 	background-color: #87ad2d;
