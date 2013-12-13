@@ -623,10 +623,6 @@ aside .widget h1{
 #contact .company-info p{
 	margin-top: 10px;
 }
-#contact .company-info a{
-	color: inherit;
-	text-decoration: none;
-}
 
 #contact .map{
 	margin-top: 20px;
@@ -641,30 +637,55 @@ aside .widget h1{
 	height: 490px;
 }
 
-#contact .contact-form{
+.contact-form{
 	margin-top: 20px;
 }
-#contact .contact-form table{
+.contact-form table{
 	border: 0;
 }
-#contact .contact-form td{
+.contact-form td{
 	border: 0;
 	padding: 10px;
 	vertical-align: middle;
 }
-#contact .contact-form input{
+.contact-form input[type="text"]{
 	width: 300px;
 	height: 28px;
 	padding: 0 10px;
 }
-#contact .contact-form input:focus{
+.contact-form input:focus{
 	outline: 0;
 }
-#contact .contact-form textarea{
+.contact-form textarea{
 	width: 420px;
 	height: 164px;
 	resize: none;
 }
-#contact .contact-form textarea:focus{
+.contact-form textarea:focus{
 	outline: 0;
+}
+.contact-form label{
+	float: left !important;
+	display: inline-block !important;
+	width: 128px;
+	margin-top: 5px;
+}
+.contact-form .contact-submit input[type="submit"]{
+	padding: 12px 14px;
+	border: none;
+	font-size: 14px;
+	font-family: "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+	font-weight: bold;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	cursor: pointer;
+	background: #45b7e3;
+	color: #FFFFFF;
+	outline: 0;
+	margin-left: 128px;
+}
+.contact-form .contact-submit input[type="submit"]:hover{
+	background: #31afdf;
 }
