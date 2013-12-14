@@ -35,8 +35,8 @@
 						<ul>
 						<?php
 							$contact_page = get_page(CONTACT_PAGE);
-							$contact_page_uri = get_page_uri(CONTACT_PAGE);
-							echo '<li><a href="' .$contact_page_uri. '">' .$contact_page->post_title. '</a></li>';
+							$contact_permalink = get_permalink(CONTACT_PAGE);
+							echo '<li><a href="' .$contact_permalink. '">' .$contact_page->post_title. '</a></li>';
 						?>
 						</ul>
 					</div>
