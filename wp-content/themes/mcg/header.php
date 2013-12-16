@@ -71,7 +71,7 @@
 	<div id="page-wrap">
 		<div id="top-bar">
 			<div class="container_16">
-				<div class="grid_3">&nbsp;</div>
+				<div class="grid_2">&nbsp;</div>
 				<div class="grid_4 email">
 					Email: noithat.mcg@gmail.com
 				</div>

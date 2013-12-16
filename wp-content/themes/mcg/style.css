@@ -736,3 +736,11 @@ aside .widget h1{
 .form-submit input[type='submit']:hover{
 	background: #31afdf;
 }
+
+.woocommerce-message{
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #F6F6F6 ;
+	background-image: url(images/info-icon.png) no-repeat top 20px;
+	border-top: 3px solid #16A1C4;
+}
