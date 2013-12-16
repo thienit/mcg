@@ -16,7 +16,7 @@ $woocommerce->show_messages();
 
 <?php do_action( 'woocommerce_before_cart' ); ?>
 
-<form action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" method="post">
+<form id="f-shopping-cart" action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" method="post">
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
@@ -35,12 +35,14 @@ $woocommerce->show_messages();
 		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
 		<?php
+		$count = 0;
+		$odd = "";
 		if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) {
 			foreach ( $woocommerce->cart->get_cart() as $cart_item_key => $values ) {
 				$_product = $values['data'];
 				if ( $_product->exists() && $values['quantity'] > 0 ) {
 					?>
-					<tr class = "<?php echo esc_attr( apply_filters('woocommerce_cart_table_item_class', 'cart_table_item', $values, $cart_item_key ) ); ?>">
+					<tr class = "<?php echo esc_attr( apply_filters('woocommerce_cart_table_item_class', 'cart_table_item', $values, $cart_item_key ) ); echo " ".$odd; ?>">
 						<!-- Remove from cart link -->
 						<td class="product-remove">
 							<?php
@@ -97,7 +99,7 @@ $woocommerce->show_messages();
 									$min 	= apply_filters( 'woocommerce_quantity_input_min', '', $_product );
 									$max 	= apply_filters( 'woocommerce_quantity_input_max', $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(), $_product );
 
-									$product_quantity = sprintf( '<div class="quantity"><input type="number" name="cart[%s][qty]" step="%s" min="%s" max="%s" value="%s" size="4" title="' . _x( 'Qty', 'Product quantity input tooltip', 'woocommerce' ) . '" class="input-text qty text" maxlength="12" /></div>', $cart_item_key, $step, $min, $max, esc_attr( $values['quantity'] ) );
+									$product_quantity = sprintf( '<div class="quantity"><input type="text" name="cart[%s][qty]" step="%s" min="%s" max="%s" value="%s" size="4" title="' . _x( 'Qty', 'Product quantity input tooltip', 'woocommerce' ) . '" class="input-text qty text" maxlength="12" /></div>', $cart_item_key, $step, $min, $max, esc_attr( $values['quantity'] ) );
 								}
 
 								echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
@@ -113,12 +115,14 @@ $woocommerce->show_messages();
 					</tr>
 					<?php
 				}
+				
+				$odd=($count++%2)?" ":"odd";
 			}
 		}
 
 		do_action( 'woocommerce_cart_contents' );
 		?>
-		<tr>
+		<tr class="<?php echo $odd;?>">
 			<td colspan="6" class="actions">
 
 				<?php if ( $woocommerce->cart->coupons_enabled() ) { ?>
@@ -131,7 +135,7 @@ $woocommerce->show_messages();
 					</div>
 				<?php } ?>
 
-				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt" name="proceed" value="<?php _e( 'Proceed to Checkout &rarr;', 'woocommerce' ); ?>" />
+				<input type="submit" class="btn-style btn-cyan button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="btn-style btn-cyan checkout-button button alt" name="proceed" value="<?php _e( 'Proceed to Checkout &rarr;', 'woocommerce' ); ?>" />
 
 				<?php do_action('woocommerce_proceed_to_checkout'); ?>
 

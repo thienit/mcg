@@ -40,7 +40,7 @@ Desc: Style for shopping-cart
 	height: 94px;
 }
 
-#f-shopping-cart .shop_table tr:odd td{
+#f-shopping-cart .shop_table tr.odd td{
 	background-color:#f2f1f1;
 }
 
@@ -109,16 +109,42 @@ Desc: Style for shopping-cart
 	text-align: right;
 }
 
-#f-shopping-cart  .actions .button{
-	.btn-style
+.cart-collaterals{
+	overflow: hidden;
 }
-#f-shopping-cart  .actions .button:focus{
-	.btn-style:focus;
+.cart-collaterals .cart_totals {
+	float: right;
+	width: 360px;
+	text-align: right;
 }
-#f-shopping-cart  .actions .button:hover{
-	.btn-cyan:hover;
+.cart-collaterals .cart_totals table{
+	width: 100%;
+	border:1px solid #BBBABA;
+	border-collapse: collapse;
+}
+.cart-collaterals .cart_totals th,
+.cart-collaterals .cart_totals td{
+	border: 0;
+	padding:10px;
+	text-align: right;
 }
 
+.cart-collaterals .cart_totals tr:nth-child(2) th,
+.cart-collaterals .cart_totals tr:nth-child(2) td{
+	background-color:#f2f1f1;
+}
+.cart-collaterals .cart_totals .cart-subtotal td,
+.cart-collaterals .cart_totals .total td{
+	font-family:"Helvetica Neue", Tahoma, "Liberation Sans", FreeSans, sans-serif;
+	font-weight: bold;
+	text-align: right;
+	color: #EF3F47;
+	font-size: 16px;
+}
+.shipping-calculator-form select,
+.shipping-calculator-form input{
+	width: 300px;
+}
 
 #f-shopping-cart .shop_table .transit_fee,
 #f-shopping-cart .shop_table .total,
