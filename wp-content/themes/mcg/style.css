@@ -110,6 +110,9 @@ header{
 #ad{
 	margin-top: 17px;
 }
+#logo img{
+	height: 64px;
+}
 
 #searching{
 	margin-top: 10px;
