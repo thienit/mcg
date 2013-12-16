@@ -25,11 +25,14 @@ get_header('shop'); ?>
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+			<div class="folder-title"><h1 class="page-title"><?php woocommerce_page_title(); ?></h1></div>
 
 		<?php endif; ?>
 
-		<?php do_action( 'woocommerce_archive_description' ); ?>
+		<?php
+		//[thien.nguyen] remove cat desc
+		// do_action( 'woocommerce_archive_description' ); 
+		?>
 
 		<?php if ( have_posts() ) : ?>
 

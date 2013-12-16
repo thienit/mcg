@@ -54,10 +54,11 @@
     }
 
     //[thien.nguyen] Change thumbnail image size
-    if(function_exists('add_theme_support')) {
-        add_theme_support('post-thumbnails');
-        set_post_thumbnail_size(220,220,true);
+    if ( function_exists( 'add_theme_support' ) ) {
+        add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 220, 220 );
     }
+
 
     //[thien.nguyen] Change excerpt more
     function new_excerpt_more($more) {
@@ -71,11 +72,11 @@
     *Woocommerce
 */
     
-    // //[thien.nguyen][woocommerce] unhook the WooCommerce wrapper
+    //[thien.nguyen][woocommerce] unhook the WooCommerce wrapper
     // remove_action('woocommerce_before_main_content',
     //     'woocommerce_output_content_wrapper',10);
     // remove_action('woocommerce_after_main_content',
-    //     'woocommerce_output_contetn_wrapper_end',10);
+    //     'woocommerce_output_content_wrapper_end',10);
 
     // add_action('woocommerce_before_main_content',
     //     'my_theme_wrapper_start',10);
@@ -83,18 +84,18 @@
     //     'my_theme_wrapper_end',10);
 
     // function my_theme_wrapper_start() {
-    //     echo '<section id="main">';
+    //     echo '<div id="content">';
     // }
 
     // function my_theme_wrapper_end() {
-    //     echo '</section>';
+    //     echo '</div>';
     // }
 
     //[thien.nguyen][woocommerce] Declare WooCommerce support
     add_theme_support('woocommerce');
 
     //[thien.nguyen][woocommerce] display category image on category 
-    add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
+   // add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
 
     function woocommerce_category_image() {
         if ( is_product_category() ){

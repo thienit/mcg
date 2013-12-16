@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<div id="content" class="container_16">
+	<div id="content" class="container_16 products">
 		<div id="breadcrumbs" class="grid_16">
 		<?php if(function_exists('bcn_display'))
 	    {

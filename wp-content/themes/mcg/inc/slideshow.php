@@ -21,11 +21,15 @@
 				}
 			?>
 			<div class="contentBox">
-				<div class="product">
+				<div class="product-item">
 					<a href="<?php echo get_permalink( $loop->post->ID ) ?>">
-					<?php if ( has_post_thumbnail( $loop->post->ID ) ) echo get_the_post_thumbnail( $loop->post->ID, 'shop_thumbnail' ); else echo '<img src="' . $woocommerce->plugin_url() . '/assets/images/placeholder.png" alt="Placeholder" />'; ?>
+					<?php
+						if(has_post_thumbnail()){
+							the_post_thumbnail(160,160);
+						}
+					?>
 					</a>
-					<p class="product-name"><a href="<?php echo get_permalink( $loop->post->ID ) ?>">	<?php the_title();?></a></p>
+					<p class="product-item-name"><a href="<?php echo get_permalink( $loop->post->ID ) ?>">	<?php the_title();?></a></p>
 					<p class="price"><?php echo $_product->get_price_html(); ?></p>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * The template for displaying product content within loops.
  *
@@ -30,12 +30,18 @@ $woocommerce_loop['loop']++;
 
 // Extra post classes
 $classes = array();
-if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 == $woocommerce_loop['columns'] )
+$is_first = $is_last = false;
+if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 == $woocommerce_loop['columns'] ){
 	$classes[] = 'first';
-if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
+	$is_first = true;
+}
+if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ){
 	$classes[] = 'last';
+	$is_last = true;
+}
 ?>
-<li <?php post_class( $classes ); ?>>
+<div class="grid_3 product-item <?php if($is_first) echo 'alpha';if($is_last) echo 'omega';?>">
+	<div <?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
@@ -50,8 +56,9 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 			 */
 			do_action( 'woocommerce_before_shop_loop_item_title' );
 		?>
+	</a>
 
-		<h3><?php the_title(); ?></h3>
+		<p class="product-item-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
 
 		<?php
 			/**
@@ -61,9 +68,9 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 			 */
 			do_action( 'woocommerce_after_shop_loop_item_title' );
 		?>
+		<a class="more-detail" href="<?php the_permalink(); ?>">Xem chi tiết</a>
 
-	</a>
 
 	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
-
-</li>
+	</div><!-- end .product -->
+</div><!-- end .grid_3 -->

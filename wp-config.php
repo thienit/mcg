@@ -69,7 +69,7 @@ $table_prefix  = 'wp_';
  * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
  * language support.
  */
-define('WPLANG', '');
+define('WPLANG', 'vi_VN');
 
 /**
  * For developers: WordPress debugging mode.
@@ -83,6 +83,9 @@ define('WP_DEBUG', false);
 /**
  *	My Define 
  */
+define( 'WP_MEMORY_LIMIT', '96M' );
+
+
 define('HOME_ARTICLE_CAT',37);
 define('BANNER_CAT',52);
 define('FOOTER_MENU1',41);
@@ -91,6 +94,8 @@ define('FEATURED_POSTS_PER_PAGE',8);
 define('FOOTER_PAGE',164);
 define('CONTACT_PAGE',64);
 define('RELATED_POSTS_NUMBER',8);
+
+define('WOOCOMMERCE_USE_CSS', false);
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

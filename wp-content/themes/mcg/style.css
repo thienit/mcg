@@ -417,13 +417,16 @@ aside .widget h1{
 #promotion h1{
 	background-color: #87ad2d;
 }
-#promotion .product{
+#promotion .product-item{
 	margin: 20px 0 10px 26px;
 }
 /**************** PRODUCT STYLE ****************/
-.products article section{
-	margin-top: 36px;
+.products{
 	position: relative;
+}
+.products article section{
+	position: relative;
+	overflow: hidden;
 }
 .products article section h1{
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
@@ -433,7 +436,8 @@ aside .widget h1{
 	padding-bottom: 10px;
 	border-bottom: 1px solid #D8D5D5;
 }
-.products article section .product{
+
+.products article section .product-item{
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
@@ -450,53 +454,54 @@ aside .widget h1{
 	color: #16A1C4;
 }
 
-.product{
+.product-item{
 	float: left;
 	width: 160px;
+	color: #707173;
 }
-.product a{
+.product-item a{
 	display: block;
 	text-decoration: none;
 	color: inherit;
 }
-.product a:hover{
+.product-item a:hover{
 	color: #16A1C4;
 }
-.product img{
+.product-item img{
 	width: 160px;
 	height: 160px;
 }
-.product-name,
-.product .price{
+.product-item-name,
+.product-item .price{
 	margin-top: 12px;
 	margin-bottom: 0px;
 	font-size: 14px;
 	height: 20px;
 	overflow: hidden;
 }
-.product .price,
-.product .old-price{
+.product-item .price,
+.product-item .old-price{
 	font-family:"Helvetica Neue", Tahoma, "Liberation Sans", FreeSans, sans-serif;
 	font-weight: bold;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #D8D5D5;
 }
-.product .old-price{
+.product-item .old-price{
 	text-decoration: line-through;
 	margin-top: 12px;
 	padding-bottom: 0px;
 	border-bottom: none;
 }
 
-.product .adding-cart,
-.product .more-detail{
+.product-item .add_to_cart_button,
+.product-item .more-detail{
 	padding: 5px 0 5px 45px;
 	margin-top: 10px;
 }
-.product .adding-cart{
+.product-item .add_to_cart_button{
 	background: url(images/cart-icon.png) no-repeat left center;
 }
-.product .more-detail{
+.product-item .more-detail{
 	background: url(images/view-icon.png) no-repeat left center;
 }
 
@@ -580,14 +585,14 @@ aside .widget h1{
 	margin-left: 20px;
 	margin-top: 24px;
 }
-#product-scrolling .product .product-name{
+#product-scrolling .product-item .product-item-name{
 	color: #FFFFFF;
 }
-#product-scrolling .product .price,
-#product-scrolling .product .old-price{
+#product-scrolling .product-item .price,
+#product-scrolling .product-item .old-price{
 	border-bottom: 0;
 }
-#product-scrolling .product a:hover{
+#product-scrolling .product-item a:hover{
 	color: #FFFFFF;
 }
 #product-scrolling .scrollingHotSpotLeft{
@@ -695,5 +700,228 @@ aside .widget h1{
 	margin-left: 128px;
 }
 .contact-form .contact-submit input[type="submit"]:hover{
+	background: #31afdf;
+}
+/**************** PRODUCT STYLE *****************/
+#product-detail {
+	margin-top: 24px;
+}
+#product-detail .big-image img{
+	width: 400px;
+	height: 300px;
+}
+#product-detail .gallery-thumbs{
+	margin-top: 36px;
+}
+#product-detail .gallery-thumbs li{
+	display: inline-block;
+	margin-right: 10px;
+	cursor: pointer;
+}
+#product-detail .gallery-thumbs img{
+	width: 60px;
+	height: 50px;
+}
+#product-detail .summary{
+	overflow: hidden;
+}
+#product-detail .summary h1,
+#product-detail .summary h2{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-weight: normal;
+	margin-bottom: 30px;
+}
+#product-detail .summary h1{
+	font-size: 24px;
+	color: #232222;
+}
+#product-detail .summary h2.old-price{
+	margin-bottom: 15px;	
+}
+#product-detail .summary h1.price{
+	color: #EF3F47;
+}
+
+#product-detail .summary p{
+	margin: 8px 0;
+}
+#product-detail .summary a{
+	color: #16a1c4;
+	text-decoration: none;
+}
+#product-detail .summary a:hover{
+	text-decoration: underline;
+}
+#product-detail .summary .product_meta{
+	margin-top: 20px;
+}
+#product-detail .summary label{
+	color: #232222; 
+	font-weight: bold;
+}
+#product-detail .summary .cart{
+	border: 1px solid #BBBABA;
+	margin-top: 20px;
+	overflow: hidden;
+	width: 99%;
+}
+#product-detail .summary table{
+	border-collapse: collapse;
+}
+#product-detail .summary td{
+	padding: 10px 0 10px 10px;
+	vertical-align: middle;
+	position: relative;
+}
+#product-detail .summary td select{
+	width: 176px;
+}
+#product-detail .summary select:focus,
+#product-detail .summary input:focus{
+	outline: 0;
+}
+#product-detail .summary input:not([type='button']){
+	padding: 11px 10px 10px 10px;
+	padding-right: 16px;
+	text-align: center;
+	width: 50px;
+	border: 1px solid #e8e6e6;
+	border-right: 15px solid #BBBABA;
+	background-color: #FAFAFA;
+}
+#product-detail .summary .quantity{
+	position: relative;
+	width: 170px;
+	text-align: right;
+	margin-top: 20px;
+	margin-left: 5px;
+}
+#product-detail .summary .quantity input[type='button']{
+	display: block;
+	margin: 0;
+	width: 20px;
+	height: 20px;
+	border:1px solid #ffffff;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+}
+
+#product-detail .summary .quantity .minus{
+	/*background: url(images/arrow-up-red.png) no-repeat center center;*/
+	background-color: #FF6565;
+	right: -3px;
+	top: 21px;
+}
+#product-detail .summary .quantity .plus{
+	/*background: url(images/arrow-down-cyan.png) no-repeat center center;*/
+	background-color: #26BDEF;
+	right: -3px;
+	top: -1px;
+}
+#product-detail .summary .single_add_to_cart_button{
+	padding: 12px 18px;
+	border: none;
+	font-size: 14px;
+	font-family: "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+	font-weight: bold;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	cursor: pointer;
+	background: #45b7e3;
+	color: #FFFFFF;
+	margin: 20px 0 20px 15px;
+}
+#product-detail .summary .single_add_to_cart_button:hover{
+	background: #31afdf;
+}
+#product-detail .woocommerce-tabs{
+	margin-top: 80px;
+	margin-bottom: 50px;
+	position: relative;
+}
+#product-detail .woocommerce-tabs .tabs{
+	margin-left: 15px;
+	height: 42px;
+	position: absolute;
+	top:-42px;
+}
+#product-detail .woocommerce-tabs .tabs a{
+	text-decoration: none;
+	color: inherit;
+	display: block;
+}
+#product-detail .woocommerce-tabs .tabs li{
+	display: inline-block;
+	width: 142px;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	border: 1px solid #BBBABA;
+	border-bottom: 0;
+	margin: 0;
+	float: left;
+	cursor: pointer;
+}
+#product-detail .woocommerce-tabs .tabs li.active{
+	background-color: #45B7E3;
+	color: #FFFFFF;
+	border: 0;
+	height: 43px;
+}
+#product-detail .woocommerce-tabs .entry-content{
+	border-top: 1px solid #D8D5D5;
+	margin-top: 0px;
+}
+#product-detail .woocommerce-tabs .entry-content h1,
+#product-detail .woocommerce-tabs .entry-content h2,
+#product-detail .woocommerce-tabs .entry-content h3,
+#product-detail .woocommerce-tabs .entry-content h4,
+#product-detail .woocommerce-tabs .entry-content h5,
+#product-detail .woocommerce-tabs .entry-content h6{
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-weight: normal;
+	margin: 20px 0;
+	color: #232222;
+}
+
+#product-detail .woocommerce-tabs .entry-content a{
+	color: #16a1c4;
+	text-decoration: none;
+}
+#product-detail .woocommerce-tabs .entry-content a:hover{
+	text-decoration: underline;
+}
+.woocommerce-ordering{
+	position: absolute;
+	right: 0;
+	top: 100px;
+	width: 173px;
+}
+
+.form-submit input[type='submit']{
+	padding: 12px 18px;
+	border: none;
+	font-size: 14px;
+	font-family: "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+	font-weight: bold;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	cursor: pointer;
+	background: #45b7e3;
+	color: #FFFFFF;
+	margin: 20px 0;
+}
+
+.comment-respond label{
+	color: #232222;
+	margin-right: 20px;
+}
+.form-submit input[type='submit']:hover{
 	background: #31afdf;
 }

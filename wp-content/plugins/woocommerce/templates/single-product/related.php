@@ -30,10 +30,10 @@ $products = new WP_Query( $args );
 $woocommerce_loop['columns'] 	= $columns;
 
 if ( $products->have_posts() ) : ?>
-
+<section>
 	<div class="related products">
 
-		<h2><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
+		<h1><?php _e( 'Related Products', 'woocommerce' ); ?></h1>
 
 		<?php woocommerce_product_loop_start(); ?>
 
@@ -46,7 +46,7 @@ if ( $products->have_posts() ) : ?>
 		<?php woocommerce_product_loop_end(); ?>
 
 	</div>
-
+<section>
 <?php endif;
 
 wp_reset_postdata();

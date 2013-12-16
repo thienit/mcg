@@ -16,16 +16,18 @@ article .folder-title h1{
 	padding: 20px 0 10px 0;
 	border-bottom: 1px solid #D8D5D5;
 }
-article section{
+
+article section.archive{
 	color: #2E2D2D;
 	margin: 30px 0;
-	border-bottom: 1px dashed #BABABA;
 	padding-bottom: 30px;
 	padding-left:200px;
 	position: relative;
 	overflow: hidden;
+	border-bottom: 1px dashed #BABABA;
 }
-article section h1{
+
+article section.archive h1{
 	font-size: 26px;
 	font-weight: normal;
 	color: #232222;
@@ -34,10 +36,10 @@ article section a{
 	text-decoration: none;
 	color: inherit;
 }
-article section a:hover{
+article section.archive a:hover{
 	color: #16a1c4;
 }
-article section .illus{
+article section.archive .illus{
 	width: 180px;
 	max-height: 200px;
 	background: #F1F0F1;
@@ -45,7 +47,7 @@ article section .illus{
 	top: 5px;
 	left: 0;
 }
-article section .illus img{
+article section.archive .illus img{
 	width: 180px;
 	max-height: 200px;
 }
@@ -69,24 +71,30 @@ article section .post-date {
 article section .post-cat {
 	background:url(../images/cat-16x16.png) no-repeat left center;
 }
-article section .desc{
+article section.archive .desc{
 	margin-top: 16px;
 }
-article section .more-view{
+article section.archive .more-view{
 	display: block;
 	color: #16a1c4;
 	font-size: 16px;
 	margin-top: 10px;
 }
-article section .more-view:hover{
+article section.archive .more-view:hover{
 	text-decoration: underline;
 }
 
 #article-detail {
+	color: #2E2D2D;
+	margin: 30px 0;
+	padding-bottom: 30px;
 	padding-left:0px;
 }
 #article-detail .post-title{
 	font-size: 30px;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-weight: normal;
+	color: #232222;
 }
 #article-detail  .post-content h1,
 #article-detail  .post-content h2,

@@ -57,35 +57,6 @@
                 echo '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
             }
         ?>
-        <!-- <ul>
-            <li><a href="#">Phòng khách</a>
-                <ul>
-                    <li><a href="#">Kệ ti vi và giá sách</a></li>
-                    <li><a href="#">Sofa</a></li>
-                    <li><a href="#">Tủ rượu, tủ trang trí</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Phòng ngủ</a>
-                <ul>
-                    <li><a href="#">Giường ngủ</a></li>
-                    <li><a href="#">Tủ áo</a></li>
-                    <li><a href="#">Bàn trang điểm</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Phòng ăn, tủ bếp</a>
-                <ul>
-                    <li><a href="#">Bộ bàn ăn</a></li>
-                    <li><a href="#">Tủ bếp</a></li>
-                    <li><a href="#">Quầy bar</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Phòng làm việc</a>
-            </li>
-            <li><a href="#">Phòng trẻ em</a>
-            </li>
-            <li><a href="#">Kệ trang trí, Kệ treo tường</a>
-            </li>
-        </ul> -->
     </div>
     <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Sidebar Widgets')) : else : ?>
 
@@ -94,15 +65,15 @@
 
     <div id="promotion" class="widget">
         <h1>Khuyến mãi</h1>
-        <div class="product">
+        <div class="product-item">
             <a href="#"><img src="../images/products/pk2.jpg"/></a>
-            <p class="product-name"><a href="#">Mẫu sản phẩm 3</a></p>
+            <p class="product-item-name"><a href="#">Mẫu sản phẩm 3</a></p>
             <p class="old-price">10.990.000 VND</p>
             <p class="price">9.990.000 VND</p>
         </div>
-        <div class="product">
+        <div class="product-item">
             <a href="#"><img src="../images/products/pn3.jpg"/></a>
-            <p class="product-name"><a href="#">Mẫu sản phẩm 3</a></p>
+            <p class="product-item-name"><a href="#">Mẫu sản phẩm 3</a></p>
             <p class="old-price">12.990.000 VND</p>
             <p class="price">10.990.000 VND</p>
         </div>

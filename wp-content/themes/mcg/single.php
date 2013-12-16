@@ -58,7 +58,7 @@
 		<?php
 				while($related_posts->have_posts()):$related_posts->the_post();
 			?>
-				<section><!-- #2 -->
+				<section class="archive"><!-- #2 -->
 					<h1><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
 					<div class="illus"><a href="<?php the_permalink();?>"><?php the_post_thumbnail();?></a></div>
 					<div class="meta">
