@@ -4,12 +4,13 @@ Author URI: http://nathiwos.com
 Version: 0.0.1
 Desc: Style for product-detail block;
 */
+/**************** PRODUCT STYLE *****************/
 #product-detail {
 	margin-top: 24px;
 }
 #product-detail .big-image img{
 	width: 400px;
-	max-height: 500px;
+	height: 300px;
 }
 #product-detail .gallery-thumbs{
 	margin-top: 36px;
@@ -46,32 +47,42 @@ Desc: Style for product-detail block;
 #product-detail .summary p{
 	margin: 8px 0;
 }
+#product-detail .summary a{
+	color: #16a1c4;
+	text-decoration: none;
+}
+#product-detail .summary a:hover{
+	text-decoration: underline;
+}
+#product-detail .summary .product_meta{
+	margin-top: 20px;
+}
 #product-detail .summary label{
 	color: #232222; 
 	font-weight: bold;
 }
-#product-detail .summary .purchase{
-	height: 165px;
+#product-detail .summary .cart{
 	border: 1px solid #BBBABA;
 	margin-top: 20px;
 	overflow: hidden;
+	width: 99%;
 }
-#product-detail .summary .purchase table{
+#product-detail .summary table{
 	border-collapse: collapse;
 }
-#product-detail .summary .purchase td{
+#product-detail .summary td{
 	padding: 10px 0 10px 10px;
 	vertical-align: middle;
 	position: relative;
 }
-#product-detail .summary .purchase td select{
+#product-detail .summary td select{
 	width: 176px;
 }
-#product-detail .summary .purchase td select:focus,
-#product-detail .summary .purchase td input:focus{
+#product-detail .summary select:focus,
+#product-detail .summary input:focus{
 	outline: 0;
 }
-#product-detail .summary .purchase td input{
+#product-detail .summary .quantity input:not([type='button']){
 	padding: 11px 10px 10px 10px;
 	padding-right: 16px;
 	text-align: center;
@@ -80,44 +91,72 @@ Desc: Style for product-detail block;
 	border-right: 15px solid #BBBABA;
 	background-color: #FAFAFA;
 }
-#product-detail .summary .purchase td .btn-container{
-	position: absolute;
-	top: 7px;
-	left: 82px;
+#product-detail .summary .quantity{
+	position: relative;
+	width: 170px;
+	text-align: right;
+	margin-top: 20px;
+	margin-left: 5px;
 }
-#product-detail .summary .purchase td .btn-container li{
+#product-detail .summary .quantity input[type='button']{
 	display: block;
-	padding: 0;
 	margin: 0;
 	width: 20px;
 	height: 20px;
-}
-#product-detail .summary .purchase .btn-container button{
-	padding: 10px;
+	border:1px solid #ffffff;
+	color: #FFFFFF;
 	border: none;
 	cursor: pointer;
-}
-#product-detail .summary .purchase .btn-container button:focus{
-	outline: 0;
-}
-#product-detail .summary .purchase .btn-container button.up{
-	background: url(../images/arrow-up-red.png) no-repeat center center;
-}
-#product-detail .summary .purchase .btn-container button.down{
-	background: url(../images/arrow-down-cyan.png) no-repeat center center;
+	position: absolute;
 }
 
-#product-detail .detail{
-	margin-top: 50px;
+#product-detail .summary .quantity .minus{
+	/*background: url(images/arrow-up-red.png) no-repeat center center;*/
+	background-color: #FF6565;
+	right: -3px;
+	top: 21px;
+}
+#product-detail .summary .quantity .plus{
+	/*background: url(images/arrow-down-cyan.png) no-repeat center center;*/
+	background-color: #26BDEF;
+	right: -3px;
+	top: -1px;
+}
+#product-detail .summary .single_add_to_cart_button{
+	padding: 12px 18px;
+	border: none;
+	font-size: 14px;
+	font-family: "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+	font-weight: bold;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	cursor: pointer;
+	background: #45b7e3;
+	color: #FFFFFF;
+	margin: 20px 0 20px 15px;
+}
+#product-detail .summary .single_add_to_cart_button:hover{
+	background: #31afdf;
+}
+#product-detail .woocommerce-tabs{
+	margin-top: 80px;
+	margin-bottom: 50px;
 	position: relative;
 }
-#product-detail .detail .tabs{
+#product-detail .woocommerce-tabs .tabs{
 	margin-left: 15px;
 	height: 42px;
 	position: absolute;
 	top:-42px;
 }
-#product-detail .detail .tabs li{
+#product-detail .woocommerce-tabs .tabs a{
+	text-decoration: none;
+	color: inherit;
+	display: block;
+}
+#product-detail .woocommerce-tabs .tabs li{
 	display: inline-block;
 	width: 142px;
 	height: 42px;
@@ -129,26 +168,32 @@ Desc: Style for product-detail block;
 	float: left;
 	cursor: pointer;
 }
-#product-detail .detail .tabs li.active{
+#product-detail .woocommerce-tabs .tabs li.active{
 	background-color: #45B7E3;
 	color: #FFFFFF;
 	border: 0;
 	height: 43px;
 }
-
-#product-detail .detail .tab_content{
+#product-detail .woocommerce-tabs .entry-content{
 	border-top: 1px solid #D8D5D5;
 	margin-top: 0px;
 }
-
-#product-detail .detail .tab_content h1,
-#product-detail .detail .tab_content h2,
-#product-detail .detail .tab_content h3,
-#product-detail .detail .tab_content h4,
-#product-detail .detail .tab_content h5,
-#product-detail .detail .tab_content h6{
+#product-detail .woocommerce-tabs .entry-content h1,
+#product-detail .woocommerce-tabs .entry-content h2,
+#product-detail .woocommerce-tabs .entry-content h3,
+#product-detail .woocommerce-tabs .entry-content h4,
+#product-detail .woocommerce-tabs .entry-content h5,
+#product-detail .woocommerce-tabs .entry-content h6{
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 	font-weight: normal;
 	margin: 20px 0;
 	color: #232222;
+}
+
+#product-detail .woocommerce-tabs .entry-content a{
+	color: #16a1c4;
+	text-decoration: none;
+}
+#product-detail .woocommerce-tabs .entry-content a:hover{
+	text-decoration: underline;
 }

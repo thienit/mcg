@@ -50,6 +50,14 @@
 	<?php if(is_single() || is_page() || is_archive() || is_search() ):?>
 		<link rel='stylesheet' href='<?php echo bloginfo('template_directory');?>/css/articles.css' />
 	<?php endif; ?>
+	
+	<?php if(is_single()): ?>
+		<link rel='stylesheet' href='<?php echo bloginfo('template_directory');?>/css/product-detail.css' />
+	<?php endif;?>
+	
+	<?php if(is_page()): ?>
+		<link rel='stylesheet' href='<?php echo bloginfo('template_directory');?>/css/shopping-cart.css' />
+	<?php endif;?>
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
