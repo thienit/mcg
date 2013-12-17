@@ -155,7 +155,7 @@ class WC_Gateway_BACS extends WC_Payment_Gateway {
 		if ( $description = $this->get_description() )
         	echo wpautop( wptexturize( wp_kses_post( $description ) ) );
 
-		echo '<h2>' . __( 'Our Details', 'woocommerce' ) . '</h2>';
+		//echo '<h2>' . __( 'Our Details', 'woocommerce' ) . '</h2>';
 
 		echo '<ul class="order_details bacs_details">';
 

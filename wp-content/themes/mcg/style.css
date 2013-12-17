@@ -647,6 +647,7 @@ aside .widget h1{
 
 .contact-form{
 	margin-top: 40px !important;
+	color: #707173 !important;
 }
 .contact-form table{
 	border: 0;
@@ -663,8 +664,9 @@ aside .widget h1{
 	margin-top: 10px !important;
 	background: #F2F1F1 !important;
 	border: 1px solid #BABABA;
+	color: #707173 !important;
 }
-.contact-form input:focus{
+.contact-form input[type="text"]:focus{
 	outline: 0;
 	background: #FFFFFF !important;
 }
@@ -675,6 +677,7 @@ aside .widget h1{
 	margin-top: 10px !important;
 	background: #F2F1F1 !important;
 	border: 1px solid #BABABA;
+	color: #707173 !important;
 }
 .contact-form textarea:focus{
 	outline: 0;
@@ -737,10 +740,30 @@ aside .widget h1{
 	background: #31afdf;
 }
 
-.woocommerce-message{
+.woocommerce-message,
+.woocommerce-info{
 	margin-top: 20px;
 	padding: 20px;
 	background-color: #F6F6F6 ;
-	background-image: url(images/info-icon.png) no-repeat top 20px;
 	border-top: 3px solid #16A1C4;
+	color: #707173;
 }
+
+.woocommerce-error{
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #F6F6F6 ;
+	border-top: 3px solid #B51606;
+	color: #707173;
+}
+.woocommerce-error li{
+	margin-top: 10px;
+}
+.woocommerce-error li:nth-child(1){
+	margin-top: 0px;
+}
+.woocommerce-error li:before{
+	content: "*";
+	color: #B51606;
+	padding-right: 5px;
+};

@@ -27,12 +27,13 @@ global $woocommerce;
 		endif;
 	?>
 
+
+	<h3><?php _e( 'Shipping Address', 'woocommerce' ); ?></h3>
+
 	<p class="form-row" id="shiptobilling">
 		<input id="shiptobilling-checkbox" class="input-checkbox" <?php checked($shiptobilling, 1); ?> type="checkbox" name="shiptobilling" value="1" />
 		<label for="shiptobilling-checkbox" class="checkbox"><?php _e( 'Ship to billing address?', 'woocommerce' ); ?></label>
 	</p>
-
-	<h3><?php _e( 'Shipping Address', 'woocommerce' ); ?></h3>
 
 	<div class="shipping_address">
 

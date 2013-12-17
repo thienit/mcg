@@ -13,7 +13,9 @@ global $woocommerce;
 
 $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 ?>
-<div id="order_review">
+<div id="order_review" class="grid_6 omega">
+	
+	<h3 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
 
 	<table class="shop_table">
 		<thead>
@@ -114,13 +116,14 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 		<tbody>
 			<?php
 				do_action( 'woocommerce_review_order_before_cart_contents' );
-
+				$count = 0;
+				$odd = "";
 				if (sizeof($woocommerce->cart->get_cart())>0) :
 					foreach ($woocommerce->cart->get_cart() as $cart_item_key => $values) :
 						$_product = $values['data'];
 						if ($_product->exists() && $values['quantity']>0) :
 							echo '
-								<tr class="' . esc_attr( apply_filters('woocommerce_checkout_table_item_class', 'checkout_table_item', $values, $cart_item_key ) ) . '">
+								<tr class="' . esc_attr( apply_filters('woocommerce_checkout_table_item_class', 'checkout_table_item', $values, $cart_item_key ) ) .' '.$odd. ' ">
 									<td class="product-name">' .
 										apply_filters( 'woocommerce_checkout_product_title', $_product->get_title(), $_product ) . ' ' .
 										apply_filters( 'woocommerce_checkout_item_quantity', '<strong class="product-quantity">&times; ' . $values['quantity'] . '</strong>', $values, $cart_item_key ) .
@@ -129,6 +132,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 									<td class="product-total">' . apply_filters( 'woocommerce_checkout_item_subtotal', $woocommerce->cart->get_product_subtotal( $_product, $values['quantity'] ), $values, $cart_item_key ) . '</td>
 								</tr>';
 						endif;
+						$odd=($count++%2)?" ":"odd";
 					endforeach;
 				endif;
 
@@ -191,7 +195,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 			<?php
 			$order_button_text = apply_filters('woocommerce_order_button_text', __( 'Place order', 'woocommerce' ));
 
-			echo apply_filters('woocommerce_order_button_html', '<input type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . $order_button_text . '" />' );
+			echo apply_filters('woocommerce_order_button_html', '<input type="submit" class="button alt btn-style btn-cyan" name="woocommerce_checkout_place_order" id="place_order" value="' . $order_button_text . '" />' );
 			?>
 
 			<?php if (woocommerce_get_page_id('terms')>0) : ?>

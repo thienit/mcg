@@ -93,9 +93,7 @@ $order = new WC_Order( $order_id );
 
 <?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 
-<header>
-	<h2><?php _e( 'Customer details', 'woocommerce' ); ?></h2>
-</header>
+<h2><?php _e( 'Customer details', 'woocommerce' ); ?></h2>
 <dl class="customer_details">
 <?php
 	if ($order->billing_email) echo '<dt>'.__( 'Email:', 'woocommerce' ).'</dt><dd>'.$order->billing_email.'</dd>';
@@ -111,9 +109,7 @@ $order = new WC_Order( $order_id );
 
 <?php endif; ?>
 
-		<header class="title">
-			<h3><?php _e( 'Billing Address', 'woocommerce' ); ?></h3>
-		</header>
+		<h3 class="title"><?php _e( 'Billing Address', 'woocommerce' ); ?></h3>
 		<address><p>
 			<?php
 				if (!$order->get_formatted_billing_address()) _e( 'N/A', 'woocommerce' ); else echo $order->get_formatted_billing_address();
@@ -126,9 +122,7 @@ $order = new WC_Order( $order_id );
 
 	<div class="col-2">
 
-		<header class="title">
-			<h3><?php _e( 'Shipping Address', 'woocommerce' ); ?></h3>
-		</header>
+		<h3 class="title"><?php _e( 'Shipping Address', 'woocommerce' ); ?></h3>
 		<address><p>
 			<?php
 				if (!$order->get_formatted_shipping_address()) _e( 'N/A', 'woocommerce' ); else echo $order->get_formatted_shipping_address();
