@@ -94,6 +94,7 @@ define('FEATURED_POSTS_PER_PAGE',8);
 define('FOOTER_PAGE',164);
 define('CONTACT_PAGE',64);
 define('RELATED_POSTS_NUMBER',8);
+define('SALE_PRODUCTS_NUMBER',4);
 
 define('WOOCOMMERCE_USE_CSS', false);
 /* That's all, stop editing! Happy blogging. */

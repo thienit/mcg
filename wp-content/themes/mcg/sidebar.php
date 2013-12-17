@@ -65,18 +65,57 @@
 
     <div id="promotion" class="widget">
         <h1>Khuyến mãi</h1>
-        <div class="product-item">
-            <a href="#"><img src="../images/products/pk2.jpg"/></a>
-            <p class="product-item-name"><a href="#">Mẫu sản phẩm 3</a></p>
-            <p class="old-price">10.990.000 VND</p>
-            <p class="price">9.990.000 VND</p>
-        </div>
-        <div class="product-item">
-            <a href="#"><img src="../images/products/pn3.jpg"/></a>
-            <p class="product-item-name"><a href="#">Mẫu sản phẩm 3</a></p>
-            <p class="old-price">12.990.000 VND</p>
-            <p class="price">10.990.000 VND</p>
-        </div>
+        <?php
+            global $post;
+            $args = array(
+               'post_type' => 'product',
+               'post_status' => 'publish',
+               'ignore_sticky_posts'   => 1,
+               'posts_per_page' => 5,
+               'orderby' => 'post_date',
+               'order' => 'desc',
+               'meta_query' => array(
+                    array(
+                        'key' => '_visibility',
+                        'value' => array('catalog', 'visible'),
+                        'compare' => 'IN'
+                    ),
+                    array(
+                        'key' => '_sale_price',
+                        'value' =>  0,
+                        'compare'   => '>',
+                        'type'      => 'NUMERIC'
+                    )
+                )
+            );
+            $loop = new WP_Query($args);
+            $count=0;
+            while($loop->have_posts()):$loop->the_post();$_product;
+                if(function_exists( 'get_product' )) {
+                    $_product = get_product($loop->post->ID);
+                }else {
+                    $_product = new WC_Product($loop->post->ID);
+                }
+            ?>
+            <div class="product-item">
+                <a href="<?php the_permalink();?>">
+                <?php
+                    if(has_post_thumbnail()){
+                        the_post_thumbnail();
+                    }
+                ?>
+                </a>
+                <p class="product-item-name"><a href="<?php the_permalink();?>"><?php the_title();?></a></p>
+                <p class="price"><?php echo $_product->get_price_html();?></p>
+            </div>
+        <?php
+            if($count++ >= SALE_PRODUCTS_NUMBER) break;
+
+            endwhile;
+            wp_reset_postdata();
+
+            
+        ?>
         <div class="clear"></div>
     </div>
 </aside>

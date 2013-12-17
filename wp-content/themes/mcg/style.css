@@ -20,7 +20,13 @@ a:hover{
 .price{
 	color: #EF3F47;
 }
+.price del{
+	color: #707173;
+}
 
+.price ins{
+	text-decoration: none;
+}
 .old-price{
 	text-decoration: line-through;
 }
@@ -46,6 +52,18 @@ a:hover{
 }
 .btn-cyan:hover{
 	background: #31afdf;
+}
+.onsale{
+	display: block;
+	position: absolute;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-os-border-radius: 50%;
+	padding: 5px;
+	background-color: #f5cc4f;
+	color: #FFFFFF;
 }
 /**************** TOP-BAR STYLE ****************/
 
@@ -486,7 +504,8 @@ aside .widget h1{
 .product-item .old-price{
 	font-family:"Helvetica Neue", Tahoma, "Liberation Sans", FreeSans, sans-serif;
 	font-weight: bold;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
+	line-height: 16px;
 	border-bottom: 1px solid #D8D5D5;
 }
 .product-item .old-price{
