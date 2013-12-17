@@ -87,9 +87,7 @@
 		<header>
 			<div class="container_16">
 				<div id="logo" class="grid_5">
-					<a href="<?php echo get_site_url();?>"  title="<?php bloginfo('name'); ?>">
-						<img src="<?php echo bloginfo('template_directory');?>/images/mcg-logo.png" alt="MCG Logo" />
-					</a>
+					<?php lm_display_logo(); ?>
 				</div><!-- end of #logo -->
 
 				<div id="ad" class="grid_7">
