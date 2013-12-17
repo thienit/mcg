@@ -509,14 +509,17 @@ aside .widget h1{
 }
 
 .pagination{
-	margin-top: 20px;
+	margin-top: 40px;
+	text-align: center;
 }
-.pagination a{
+.pagination a,
+.pagination span{
 	color: inherit;
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 	font-size: 16px;
 	text-decoration: none;
 	padding-right: 6px;
+	padding-left: 6px;
 }
 .pagination a:hover{
 	color: #16A1C4;
