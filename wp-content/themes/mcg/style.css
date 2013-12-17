@@ -713,10 +713,9 @@ aside .widget h1{
 }
 
 .woocommerce-ordering{
-	position: absolute;
-	right: 0;
-	top: 100px;
-	width: 173px;
+	padding: 10px 0;
+	text-align: right;
+	background: #f3f6f8;
 }
 
 .form-submit input[type='submit']{
