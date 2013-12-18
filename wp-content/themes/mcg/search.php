@@ -19,7 +19,7 @@
 				<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 
 				<?php while (have_posts()) : the_post(); ?>
-					<section>
+					<section class="archive">
 						<h1><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
 						<div class="illus"><a href="<?php the_permalink();?>"><?php the_post_thumbnail();?></a></div>
 						<div class="meta"><div class="post-date"><?php the_time('d-m-Y');?></div> <div class="post-cat"><?php the_category();?></div></div>

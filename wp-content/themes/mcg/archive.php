@@ -53,7 +53,7 @@
 			<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>	
 		<?php else : ?>
 
-			<div class="folder-title"><h1>Nothing found</h1></div>
+			<div class="folder-title"><h1><?php single_cat_title(); ?></h1></div>
 
 		<?php endif; ?>	
 		</article>
