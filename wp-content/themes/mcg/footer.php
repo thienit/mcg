@@ -35,14 +35,14 @@
 						<ul>
 						<?php
 							$contact_page = get_page(CONTACT_PAGE);
-							$contact_permalink = get_permalink(CONTACT_PAGE);
+							$contact_permalink = get_site_url() .'/'.$contact_page->post_name;
 							echo '<li><a href="' .$contact_permalink. '">' .$contact_page->post_title. '</a></li>';
 						?>
 						</ul>
 					</div>
 					<div class="contact grid_6">
-						<div class="hotline">Hotline: (04)6 269 8265</div>
-						<div class="email">Email: noithat.mcg@gmail.com</div>
+						<div class="hotline">Hotline: <?php $page = get_page(HOTLINE); echo $page->post_content;?></div>
+						<div class="email">Email: <?php $page = get_page(EMAIL); echo $page->post_content;?></div>
 					</div>
 					<div class="clear"></div>
 					<div class="grid_16">

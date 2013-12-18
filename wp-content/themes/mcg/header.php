@@ -73,10 +73,10 @@
 			<div class="container_16">
 				<div class="grid_2">&nbsp;</div>
 				<div class="grid_4 email">
-					Email: noithat.mcg@gmail.com
+					Email: <?php $page = get_page(EMAIL); echo $page->post_content;?>
 				</div>
 				<div class="grid_4 hotline">
-					Hotline: (04)6 269 8625 
+					Hotline: <?php $page = get_page(HOTLINE); echo $page->post_content;?>
 				</div>
 
 				<div id="top-menu-wrapper">
