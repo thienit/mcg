@@ -474,6 +474,9 @@ aside .widget h1{
 .products article section > .more-view:hover{
 	color: #16A1C4;
 }
+.products .loop .omega{
+	margin-top: 0;
+}
 
 .product-item{
 	float: left;

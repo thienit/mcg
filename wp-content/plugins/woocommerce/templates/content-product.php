@@ -74,3 +74,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ){
 	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 	</div><!-- end .product -->
 </div><!-- end .grid_3 -->
+<?php
+if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ){
+	echo '<div class="clear"></div>';
+}?>
