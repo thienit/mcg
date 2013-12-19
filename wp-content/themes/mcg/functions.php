@@ -109,4 +109,8 @@
         }
     }
 
+    function get_term_super_parent(term_id){
+        
+    }
+
 ?>

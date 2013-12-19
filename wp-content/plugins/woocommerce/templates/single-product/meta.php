@@ -21,7 +21,16 @@ global $post, $product;
 
 	<?php
 		$size = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
-		echo $product->get_categories(', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', $size, 'woocommerce' ) . ' ', '.</span>');
+		$categories = '<span class="posted_in">' . _n( 'Category:', 'Categories:', $size, 'woocommerce' );
+		$terms = get_the_terms( $post->ID, 'product_cat' ) ;
+
+		foreach ($terms as $term ) {
+			if($term->term_id != FEATURED_PRODUCT_CAT){
+				$categories = $categories. '<a rel="tag" href="'.get_term_link($term,'product_cat').'">'.$term->name.'</a>&nbsp;';
+			}
+		}
+
+		echo $categories.'</span>';
 	?>
 
 	<?php

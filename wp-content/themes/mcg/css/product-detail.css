@@ -55,7 +55,9 @@ Desc: Style for product-detail block;
 	text-decoration: underline;
 }
 #product-detail .summary .product_meta{
-	margin-top: 20px;
+	margin-top: 10px;
+	font-style: italic;
+	font-size: 11px;
 }
 #product-detail .summary label{
 	color: #232222; 
