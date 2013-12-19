@@ -1,7 +1,10 @@
 <?php get_header(); ?>
-
-	<h2>Error 404 - Page Not Found</h2>
-
-<?php get_sidebar(); ?>
+<section>
+		<div class="container_16">
+			<div class="grid_16">
+				<h1>Sản phẩm</h1>
+			</div>
+		</div>
+</section>
 
 <?php get_footer(); ?>
