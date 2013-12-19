@@ -2,27 +2,44 @@
     <div id="cat" class="widget">
         <h1><?php 
             $url = explode('/',$_SERVER['REQUEST_URI']);
-            $term;
             $term_id;
             $term_name;
-            if($url[2]=='product-category'){
+            if($url[2]=='product-category') {
                 $term = get_term_by('slug',$url[3],'product_cat',OBJECT);
-                $term_id = $term->term_id;
-                $term_name = $term->name;
-            }else if($url[2]=='category'){
+            } else if($url[2]=='category') {
                 $term = get_term_by('slug',$url[3],'category',OBJECT);
-                $term_id = $term->term_id;
-                $term_name = $term->name;
-            }else if($url[2]=='product'){
+            } else if($url[2]=='product') {
                $cats = get_the_terms( $post->ID, 'product_cat' ) ;
                
                foreach ($cats as $cat) {
                    if($cat->term_id != FEATURED_PRODUCT_CAT) {
-                        echo "<pre>";
-                         print_r($cat);
-                        echo "</pre>";
+                        $term = get_term_super_parent($cat->term_id,'product_cat');
+                        break;
                    }
                }
+            } else if(is_single()) {
+                $cats = get_the_terms( $post->ID,'category');
+
+                foreach ($cats as $cat) {
+                   if($cat->term_id != FEATURED_PRODUCT_CAT) {
+                        $term = get_term_super_parent($cat->term_id,'category');
+                        break;
+                   }
+               }
+            } 
+            if(isset($term) && $term->term_id != 0) {
+                $term_id = $term->term_id;
+                $term_name = $term->name;
+            } else {
+                $menu_name="main_nav";
+                if(($locations = get_nav_menu_locations()) && isset($locations[$menu_name])){
+                    $menu = wp_get_nav_menu_object($locations[$menu_name]);
+                    $menu_items = wp_get_nav_menu_items($menu->term_id);
+                    if(isset($menu_items[1])) {
+                        $term_id = $menu_items[1]->object_id;
+                        $term_name = $menu_items[1]->title;
+                    }
+                }
             }
             echo $term_name;
         ?></h1>

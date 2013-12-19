@@ -109,8 +109,12 @@
         }
     }
 
-    function get_term_super_parent(term_id){
-        
+    function get_term_super_parent($term_id,$taxonomy){
+        $term = get_term_by('id',$term_id,$taxonomy,OBJECT);
+        while(isset($term) && $term->parent!=0) {
+            $term = get_term_by('id',$term->parent,$taxonomy,OBJECT);
+        }
+        return $term;
     }
 
 ?>
