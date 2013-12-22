@@ -71,8 +71,8 @@
 	<div id="page-wrap">
 		<div id="top-bar">
 			<div class="container_16">
-				<div class="grid_2">&nbsp;</div>
-				<div class="grid_4 email">
+				<div class="grid_1">&nbsp;</div>
+				<div class="grid_5 email">
 					Email: <?php $page = get_page(EMAIL); echo $page->post_content;?>
 				</div>
 				<div class="grid_4 hotline">
