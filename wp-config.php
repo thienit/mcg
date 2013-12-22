@@ -89,7 +89,6 @@ define( 'WP_MEMORY_LIMIT', '96M' );
 define('HOME_ARTICLE_CAT',37);
 define('BANNER_CAT',52);
 define('FOOTER_MENU1',41);
-define('FEATURED_PRODUCT_CAT',53);
 define('FEATURED_POSTS_PER_PAGE',8);
 define('FOOTER_PAGE',164);
 define('CONTACT_PAGE',64);
