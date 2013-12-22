@@ -31,14 +31,12 @@
 					$menu = wp_get_nav_menu_object($locations[$menu_name]);
 					$menu_items = wp_get_nav_menu_items($menu->term_id);
 					$count = 0;
-					$count_parent=0;
 					$submenu = false;
 					foreach ($menu_items as $item) :
 						if(!$item->menu_item_parent):
 							$parent_id = $item->ID;
 							$image = wp_get_attachment_image_src( get_post_thumbnail_id($item->ID));
 							$image_src=str_replace("-150x150","",$image[0]);//[thien.nguyen] Get full size
-							$count_parent++;
 							$count_child=0;
 							$parent_url = $item->url;
 					?>
@@ -58,21 +56,21 @@
 										<a href="<?php echo $item->url;?>"><?php echo $item->title;?></a>
 									</li>
 							<?php endif;?>
-							<?php if($menu_items[$count + 1]->menu_item_parent != $parent_id && $submenu):?>
+							<?php if(isset($menu_items[$count + 1]) && $menu_items[$count + 1]->menu_item_parent != $parent_id && $submenu):?>
 								</ul>
-								<?php $submenu = false; endif;
+								<?php 
+									$submenu = false; 
+									endif;
 						endif;?>
 
-					<?php if(!$menu_items[$count + 1]->menu_item_parent): ?>
+					<?php if( (isset($menu_items[$count + 1]) && !$menu_items[$count + 1]->menu_item_parent) 
+								|| !isset($menu_items[$count + 1]) ): ?>
 							</li>
 						</ul>
 						<div class="more-detail"><a href="<?php echo $parent_url?>">Xem thêm</a></div>
 					</div>
 					<?php endif;
 						$count++;
-						if($count_parent >7) {
-							break;
-						}
 					endforeach;
 				}
 				else {
