@@ -6,7 +6,7 @@
 	// Load jQuery
 	if ( !is_admin() ) {
 	   wp_deregister_script('jquery');
-	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"), false);
+	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.9/jquery.min.js"), false);
 	   wp_enqueue_script('jquery');
        wp_register_script('jquery_custom', get_bloginfo('template_directory').'/js/jquery-ui-1.10.3.custom.min.js');
        wp_enqueue_script('jquery_custom');
@@ -19,8 +19,9 @@
        wp_register_script('product_scroll', get_bloginfo('template_directory').'/js/product-scroll.js');
        wp_enqueue_script('product_scroll');
        wp_register_script('function', get_bloginfo('template_directory').'/js/function.js');
-       wp_enqueue_script('function');
+       wp_enqueue_script('function');       
 	}
+
 	
 	// Clean up the <head>
 	function removeHeadLinks() {
