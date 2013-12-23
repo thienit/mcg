@@ -43,6 +43,7 @@
 					<div class="contact grid_6">
 						<div class="hotline">Hotline: <?php $page = get_page(HOTLINE); echo $page->post_content;?></div>
 						<div class="email">Email: <?php $page = get_page(EMAIL); echo $page->post_content;?></div>
+						<div class="more-contact"><?php $page = get_page_by_path('more-contact-info'); echo $page->post_content;?></div>
 					</div>
 					<div class="clear"></div>
 					<div class="grid_16">
