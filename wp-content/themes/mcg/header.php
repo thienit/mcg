@@ -45,6 +45,7 @@
 
 	<?php if(is_home() ):?>
 		<link rel='stylesheet' href='<?php echo bloginfo('template_directory');?>/css/home.css' />
+		<link rel='stylesheet' href='<?php echo bloginfo('template_directory');?>/css/nivo-slider.css' />
 	<?php endif; ?>
 
 	<?php if(is_single() || is_page() || is_archive() || is_search() ):?>
@@ -91,7 +92,10 @@
 				</div><!-- end of #logo -->
 
 				<div id="ad" class="grid_7">
-					&nbsp;
+				<?php 
+					$page = get_page_by_path("top-ads");
+					echo $page->post_content;
+				?>
 				</div><!-- end of #ad -->
 
 				<div id="searching" class="grid_4">
