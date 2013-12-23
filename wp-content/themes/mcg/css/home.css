@@ -21,9 +21,8 @@ Version: 0.0.1
 #banner{
 	margin-top: 30px;
 }
-#banner .grip_16{
+#banner .grid_16{
 	position: relative;
-	height: 340px;
 }
 #banner h1{
 	position: absolute;
@@ -37,8 +36,11 @@ Version: 0.0.1
 	background: url(../images/banner-title-bg.png) no-repeat;
 }
 #banner img{
-	height: 340px;
-	width: 940px;
+	height: 320px !important;
+	width: 918px !important;
+	padding: 10px;
+	background: #FAFAFA;
+	border: 1px solid #BABABA ;
 }
 
 /**************** PRODUCT-TILES STYLE ****************/

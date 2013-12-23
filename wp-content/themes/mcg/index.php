@@ -2,10 +2,10 @@
 	
 	<section id="banner">
 		<div class="container_16">
-			<div class="grid_16">
+			<div id="banner_slider_wrap" class="grid_16">
 			<?php
 				global $post;
-				$args = array('numberposts'=>1,'category'=>BANNER_CAT,'orderby'=>'post_date','order'=>'DESC');
+				$args = array('category'=>BANNER_CAT,'orderby'=>'post_date','order'=>'ASC');
 				$custom_posts = get_posts($args);
 				foreach ($custom_posts as $post){
 					echo $post->post_content;
