@@ -14,4 +14,6 @@ global $product;
 
 <?php if ( $price_html = $product->get_price_html() ) : ?>
 	<p class="price"><?php echo $price_html; ?></p>
+<?php else: ?>
+	<p class="price">0 VNĐ</p>
 <?php endif; ?>

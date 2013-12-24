@@ -13,7 +13,12 @@ global $post, $product;
 ?>
 <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 	<h1 class="price">
-	<?php echo $product->get_price_html(); ?>
+	<?php 
+		if($product->get_price_html())
+			echo $product->get_price_html();
+		else
+			echo '0 VNĐ';
+	?>
 	<meta itemprop="priceCurrency" content="<?php echo get_woocommerce_currency(); ?>" />
 	</h1>
 	
