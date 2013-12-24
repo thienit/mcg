@@ -23,9 +23,9 @@ global $post, $product;
 		$size = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
 		$categories = '<span class="posted_in">' . _n( 'Category:', 'Categories:', $size, 'woocommerce' );
 		$terms = get_the_terms( $post->ID, 'product_cat' ) ;
-
+		$featured_cat = get_term_by('slug','featured','product_cat');
 		foreach ($terms as $term ) {
-			if($term->term_id != FEATURED_PRODUCT_CAT){
+			if($term->term_id != $featured_cat->term_id){
 				$categories = $categories. '<a rel="tag" href="'.get_term_link($term,'product_cat').'">'.$term->name.'</a>&nbsp;';
 			}
 		}

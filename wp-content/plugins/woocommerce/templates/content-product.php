@@ -40,7 +40,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ){
 	$is_last = true;
 }
 ?>
-<div class="grid_3 product-item <?php if($is_first) echo 'alpha';if($is_last) echo 'omega';?>">
+<div class="grid_3 product-item <?php if($is_first) echo 'alpha';if($is_last && $woocommerce_loop['columns']==4) echo 'omega';?>">
 	<div <?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
@@ -77,4 +77,4 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ){
 <?php
 if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ){
 	echo '<div class="clear"></div>';
-}?>
+}?> 
