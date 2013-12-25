@@ -11,8 +11,11 @@ Version: 0.0.1
 /**************** GENERAL STYLE ****************/
 body{
 	color: #707173;
+	background-color: #D1D1D1;
 }
-
+body.home{
+	background: #FFFFFF;
+}
 a:hover{
 	color: #16a1c4;
 }
@@ -232,6 +235,7 @@ header{
 /**************** NAV STYLE ****************/
 nav{
 	margin-top: 20px;
+	margin-bottom: 10px;
 	text-align: center;
 }
 nav li{
@@ -244,7 +248,7 @@ nav li{
 }
 nav li a{
 	text-decoration: none;
-	color:#707173;
+	color:#232222;
 	display: block;
 }
 nav li a:first-child{
@@ -361,9 +365,12 @@ footer .copyright{
 }
 
 /**************** CONTENT STYLE ****************/
+#content{
+	background-color: #FFFFFF;
+}
 
 #breadcrumbs{
-	margin-top: 25px;
+	margin-top: 20px;
 	font-size: 14px;
 }
 
@@ -560,9 +567,12 @@ aside .widget h1{
 /**************** SROLL SLIDE STYLE ****************/
 /**************** SLIDESHOW STYLE ****************/
 #slideshow{
-	margin-top: 50px;
+	margin-top: 20px;
 	height: 270px;
 	background-color: #16A1C4; 
+}
+.home #slideshow{
+	margin-top: 50px;
 }
 /*#slideshow .scrollling-control{
 	position: relative;
