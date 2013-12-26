@@ -17,7 +17,7 @@ global $post, $product;
 		if($product->get_price_html())
 			echo $product->get_price_html();
 		else
-			echo '0 VNĐ';
+			echo 'Giá liên hệ';
 	?>
 	<meta itemprop="priceCurrency" content="<?php echo get_woocommerce_currency(); ?>" />
 	</h1>
