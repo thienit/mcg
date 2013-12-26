@@ -57,7 +57,6 @@ Desc: Style for product-detail block;
 #product-detail .summary .product_meta{
 	margin-top: 10px;
 	font-style: italic;
-	font-size: 11px;
 }
 #product-detail .summary label{
 	color: #232222; 
