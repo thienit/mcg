@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce v2.0.9\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2013-04-29 16:02:06+00:00\n"
-"PO-Revision-Date: 2013-12-25 01:41:58+0000\n"
+"PO-Revision-Date: 2013-12-26 01:30:19+0000\n"
 "Last-Translator: Thach Pham <ezit92@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -5967,7 +5967,7 @@ msgstr ""
 #: templates/cart/totals.php:46 templates/checkout/review-order.php:45
 #@ woocommerce
 msgid "Shipping"
-msgstr ""
+msgstr "Vận chuyển"
 
 #: templates/cart/totals.php:83 templates/checkout/review-order.php:82
 #@ woocommerce
@@ -6134,12 +6134,12 @@ msgstr "Đặt hàng"
 #: templates/checkout/review-order.php:199
 #@ woocommerce
 msgid "I have read and accept the"
-msgstr ""
+msgstr "Tôi đã đọc và chấp nhận "
 
 #: templates/checkout/review-order.php:199
 #@ woocommerce
 msgid "terms &amp; conditions"
-msgstr ""
+msgstr "quy định và điều kiện"
 
 #: templates/checkout/thankyou.php:18
 #@ woocommerce
