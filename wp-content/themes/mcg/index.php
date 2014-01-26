@@ -5,7 +5,7 @@
 			<div id="banner_slider_wrap" class="grid_16">
 			<?php
 				global $post;
-				$args = array('category'=>BANNER_CAT,'orderby'=>'post_date','order'=>'ASC');
+				$args = array('category'=>BANNER_CAT,'orderby'=>'post_date','order'=>'ASC','post_status'=>'any');
 				$custom_posts = get_posts($args);
 				foreach ($custom_posts as $post){
 					echo $post->post_content;
