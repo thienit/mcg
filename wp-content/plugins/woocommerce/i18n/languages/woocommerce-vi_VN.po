@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce v2.0.9\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2013-04-29 16:02:06+00:00\n"
-"PO-Revision-Date: 2013-12-30 17:05:47+0000\n"
+"PO-Revision-Date: 2014-06-14 05:57:44+0000\n"
 "Last-Translator: Thach Pham <ezit92@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -198,7 +198,7 @@ msgstr "Thuần chữ"
 #: classes/emails/class-wc-email-new-order.php:149
 #@ woocommerce
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: classes/abstracts/abstract-wc-email.php:459
 #: classes/emails/class-wc-email-customer-completed-order.php:177
@@ -206,7 +206,7 @@ msgstr ""
 #: classes/emails/class-wc-email-new-order.php:150
 #@ woocommerce
 msgid "Multipart"
-msgstr ""
+msgstr "Multipart"
 
 #: classes/abstracts/abstract-wc-email.php:495
 #: classes/abstracts/abstract-wc-email.php:516
@@ -234,12 +234,12 @@ msgstr "Thiết lập"
 #: classes/abstracts/abstract-wc-email.php:572
 #@ woocommerce
 msgid "HTML template"
-msgstr ""
+msgstr "HTML template"
 
 #: classes/abstracts/abstract-wc-email.php:573
 #@ woocommerce
 msgid "Plain text template"
-msgstr ""
+msgstr "Plain text template"
 
 #: classes/abstracts/abstract-wc-email.php:592
 #@ woocommerce
@@ -284,7 +284,7 @@ msgstr "Bạn có chắc là muốn xóa template này chứ?"
 #: classes/abstracts/abstract-wc-product.php:33
 #@ woocommerce
 msgid "The <code>WC_Product</code> class is now abstract. Use <code>get_product()</code> to instantiate an instance of a product instead of calling this class directly."
-msgstr ""
+msgstr "The <code>WC_Product</code> class is now abstract. Use <code>get_product()</code> to instantiate an instance of a product instead of calling this class directly."
 
 #: classes/abstracts/abstract-wc-product.php:545
 #: classes/abstracts/abstract-wc-product.php:550
@@ -353,27 +353,27 @@ msgstr "của 5"
 #: classes/class-wc-cache-helper.php:92
 #@ woocommerce
 msgid "In order for <strong>database caching</strong> to work with WooCommerce you must add <code>_wc_session_</code> to the \"Ignored Query Strings\" option in W3 Total Cache settings <a href=\"%s\">here</a>."
-msgstr ""
+msgstr "In order for <strong>database caching</strong> to work with WooCommerce you must add <code>_wc_session_</code> to the \"Ignored Query Strings\" option in W3 Total Cache settings <a href=\"%s\">here</a>."
 
 #: classes/class-wc-cart.php:460
 #@ woocommerce
 msgid "Sorry, we do not have enough \"%s\" in stock to fulfill your order (%s in stock). Please edit your cart and try again. We apologise for any inconvenience caused."
-msgstr ""
+msgstr "Sorry, we do not have enough \"%s\" in stock to fulfill your order (%s in stock). Please edit your cart and try again. We apologise for any inconvenience caused."
 
 #: classes/class-wc-cart.php:479 classes/class-wc-cart.php:488
 #@ woocommerce
 msgid "Sorry, we do not have enough \"%s\" in stock to fulfil your order (%s in stock). Please edit your cart and try again. We apologise for any inconvenience caused."
-msgstr ""
+msgstr "Sorry, we do not have enough \"%s\" in stock to fulfil your order (%s in stock). Please edit your cart and try again. We apologise for any inconvenience caused."
 
 #: classes/class-wc-cart.php:523
 #@ woocommerce
 msgid "Sorry, we do not have enough \"%s\" in stock to fulfil your order right now. Please try again in %d minutes or edit your cart and try again. We apologise for any inconvenience caused."
-msgstr ""
+msgstr "Sorry, we do not have enough \"%s\" in stock to fulfil your order right now. Please try again in %d minutes or edit your cart and try again. We apologise for any inconvenience caused."
 
 #: classes/class-wc-cart.php:533
 #@ woocommerce
 msgid "Sorry, \"%s\" is not in stock. Please edit your cart and try again. We apologise for any inconvenience caused."
-msgstr ""
+msgstr "Sorry, \"%s\" is not in stock. Please edit your cart and try again. We apologise for any inconvenience caused."
 
 #: classes/class-wc-cart.php:845
 #@ woocommerce
@@ -410,7 +410,7 @@ msgstr "<a href=\"%s\" class=\"button\">%s</a> Sản phẩm này có trong giỏ
 #: classes/class-wc-cart.php:1813
 #@ woocommerce
 msgid "via"
-msgstr ""
+msgstr "qua"
 
 #: classes/class-wc-checkout.php:64
 #@ woocommerce
@@ -470,7 +470,7 @@ msgstr ""
 #: classes/class-wc-checkout.php:278
 #@ woocommerce
 msgid "Backordered"
-msgstr ""
+msgstr "Backordered"
 
 #: classes/class-wc-checkout.php:388
 #@ woocommerce
@@ -2960,7 +2960,7 @@ msgstr "Mã SKU:"
 #: woocommerce.php:982
 #@ woocommerce
 msgid "Products"
-msgstr ""
+msgstr "Các sản phẩm"
 
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:294
 #@ woocommerce
@@ -3714,7 +3714,7 @@ msgstr ""
 #: classes/widgets/class-wc-widget-featured-products.php:75
 #@ woocommerce
 msgid "Featured Products"
-msgstr ""
+msgstr "Sản phẩm nổi bật"
 
 #: classes/widgets/class-wc-widget-layered-nav-filters.php:31
 #@ woocommerce
@@ -3856,13 +3856,13 @@ msgstr ""
 #: classes/widgets/class-wc-widget-product-categories.php:35
 #@ woocommerce
 msgid "WooCommerce Product Categories"
-msgstr ""
+msgstr "WooCommerce Product Categories"
 
 #: classes/widgets/class-wc-widget-product-categories.php:57
 #: woocommerce.php:821 woocommerce.php:823
 #@ woocommerce
 msgid "Product Categories"
-msgstr " "
+msgstr "Các danh mục sản phẩm"
 
 #: classes/widgets/class-wc-widget-product-categories.php:129
 #@ woocommerce
@@ -3903,7 +3903,7 @@ msgstr ""
 #: classes/widgets/class-wc-widget-product-categories.php:204
 #@ woocommerce
 msgid "Only show children for the current category"
-msgstr ""
+msgstr "Chỉ hiện con cho chuyên mục hiện tại"
 
 #: classes/widgets/class-wc-widget-product-search.php:31
 #@ woocommerce
@@ -7065,7 +7065,7 @@ msgstr ""
 #: woocommerce-core-functions.php:1554
 #@ woocommerce
 msgid "Select a category"
-msgstr ""
+msgstr "Chọn một danh mục"
 
 #: woocommerce-core-functions.php:1558
 #@ woocommerce
